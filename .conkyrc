@@ -1,0 +1,68 @@
+conky.config = {
+    lua_load = '/home/michael/.conky.d/processes.lua',
+
+    background = true,
+    update_interval = 10,
+    double_buffer = true,
+    no_buffers = true,
+    imlib_cache_size = 10,
+
+    gap_x = 10,
+    gap_y = 10,
+
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+    own_window_argb_visual = true,
+
+    border_inner_margin = 0,
+    border_outer_margin = 0,
+
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+
+    show_graph_scale = false,
+    show_graph_range = false,
+
+    xftalpha = 0,
+
+    use_xft = true,
+    font = 'mono:size=10',
+
+    text_buffer_size = 256,
+    override_utf8_locale = true,
+
+    short_units = true,
+    pad_percents = 2,
+    use_spacer = left,
+
+    top_name_width = 100,
+
+    default_color = white,
+    color1 = 'DCDCDC',
+    color2 = '1994D1',
+
+    default_shade_color = 'AAAAAA',
+    default_outline_color = 'AAAAAA'
+}
+
+conky.text = [[
+Updates ${updates}
+${color2}[CPU]${color}
+${lua_parse cpus}
+
+${color2}[MEMORY]${color}
+         USED       SIZE TYPE
+------------------------
+${membar 9,30} ${lua_parse format %8s ${mem}} / ${lua_parse format %8s ${memmax}} Memory
+${swapbar 9,30} ${lua_parse format %8s ${swap}} / ${lua_parse format %8s ${swapmax}} Swap
+
+${color2}[FILESYSTEM]${color}
+${lua_parse filesystem}
+
+${color2}[PROCESS]${color}
+${lua_parse processes 10}
+]]
