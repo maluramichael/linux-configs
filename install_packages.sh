@@ -1,6 +1,10 @@
 #!/bin/sh
 cd $HOME
 
+# ZSH
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
+
 # NVM
 mkdir ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
