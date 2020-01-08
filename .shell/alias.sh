@@ -9,6 +9,7 @@ alias l='ls -lahi'   # Long view, show hidden
 alias la='ls -AFh'    # Compact view, show hidden
 alias ll='ls -lFh'   # Long view, no hidden
 alias reload="source ~/.zshrc"
+alias remove_empty_dirs="find . -type d -empty"
 
 # Update existing commands
 alias grep='grep --color=auto' # Always highlight grep search term
