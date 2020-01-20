@@ -14,3 +14,6 @@ git clone git://code.qt.io/qt/qt5.git --branch 5.12 qt
 
 # BOOST
 git clone --recurse-submodules git@github.com:boostorg/boost.git
+
+# OpenCV
+git clone git@github.com:opencv/opencv.git
