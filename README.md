@@ -5,20 +5,17 @@ My ~ configurations for linux
 
 First install all packages.
 ```sh
-sh install_packages.sh
+cd ~
+mkdir -p development
+cd development
+git clone git@github.com:maluramichael/linux-configs.git dot-files
+cd dot-files
+./install-packages.sh
 ```
 
 Then link configurations in to your home directory.
 ```sh
-sh link.sh
-exit
-```
-
-Reopen the terminal.
-
-Some stuff needs the environment to be linked.
-```sh
-sh after_link.sh
+./link.sh
 ```
 
 Done
