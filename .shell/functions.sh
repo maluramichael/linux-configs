@@ -1,11 +1,8 @@
-# determine local IP address
-ips () { ifconfig | grep "inet " | awk '{ print $2 }' | grep -v '127.0.0.1'}
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
-mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
+ips () { ip addr | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 }
+cd() { builtin cd "$@"; ls }
+mcd () { mkdir -p "$1" && cd "$1"; }
 mans () { man $1 | grep -iC2 --color=always $2 | less }
 
-#   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
 extract () {
   if [ -f $1 ] ; then
     case $1 in
