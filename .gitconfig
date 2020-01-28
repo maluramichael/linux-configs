@@ -1,5 +1,5 @@
 [core]
-  fileMod = false
+	ileMod = false
 [user]
 	name = Michael Malura
 	email = michael@malura.de
@@ -16,3 +16,5 @@
 [mergetool]
 	keepTemporaries = false
 	prompt = false
+[alias]
+	update = "!f(){ git stash save && git pull --rebase && git stash pop; };f"
