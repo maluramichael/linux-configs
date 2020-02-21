@@ -1,55 +1,37 @@
 #!/usr/bin/env bash
-
 set -o errexit
 set -o pipefail
 set -o nounset
 
-echo "Link from $PWD to $HOME"
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" # script directory
+__file="${__dir}/$(basename "${BASH_SOURCE[0]}")" # script path
+__base="$(basename ${__file} .sh)" # script name
 
-# ZSH
-if test -f "$HOME/.zshrc" && ! test -h "$HOME/.zshrc"; then mv "$HOME/.zshrc" "$HOME/.zshrc.bak"; fi
-if ! test -f "$HOME/.zshrc"; then ln -s "$PWD/.zshrc" "$HOME/.zshrc"; fi
+echo "Link from ${__dir} to $HOME"
 
-mkdir -p "$HOME/.oh-my-zsh/themes"
-if ! test -h "$HOME/.oh-my-zsh/themes/devnetik.zsh-theme"; then
-    ln -s "$PWD/.oh-my-zsh/themes/devnetik.zsh-theme" "$HOME/.oh-my-zsh/themes/devnetik.zsh-theme"
-fi
+link(){
+    from="${__dir%/}/${1}"
+    to="${HOME%/}/${1}"
 
-# Bash
-if test -f "$HOME/.profile" && ! test -h "$HOME/.profile"; then mv "$HOME/.profile" "$HOME/.profile.bak"; fi
-if ! test -f "$HOME/.profile"; then ln -s "$PWD/.profile" "$HOME/.profile"; fi
-
-# NPM
-if test -f "$HOME/.npmrc" && ! test -h "$HOME/.npmrc"; then mv "$HOME/.npmrc" "$HOME/.npmrc.bak"; fi
-if ! test -f "$HOME/.npmrc"; then ln -s "$PWD/.npmrc" "$HOME/.npmrc"; fi
-
-# GIT
-if test -f "$HOME/.gitconfig" && ! test -h "$HOME/.gitconfig"; then mv "$HOME/.gitconfig" "$HOME/.gitconfig.bak"; fi
-if ! test -f "$HOME/.gitconfig"; then ln -s "$PWD/.gitconfig" "$HOME/.gitconfig"; fi
-
-# CONKY
-if test -f "$HOME/.conkyrc" && ! test -h "$HOME/.conkyrc"; then mv "$HOME/.conkyrc" "$HOME/.conkyrc.bak"; fi
-if ! test -f "$HOME/.conkyrc"; then ln -s "$PWD/.conkyrc" "$HOME/.conkyrc"; fi
-
-if [ -d "$HOME/.conky.d" ]; then
-    if ! test -h "$HOME/.conky.d"; then
-        mv "$HOME/.conky.d" "$HOME/.conky.d.bak/"
+    echo "[+] Create a symlink ${from} -> ${to}"
+    if [ -f "${to}" ] || [ -d "${to}" ]; then
+        if [[ -h "${to}" ]]; then
+            echo "Remove existing symlink ${to}"
+            rm -r ${to}
+        else
+            echo "Backup existing ${to} ${to}.bak"
+            mv ${to} ${to}.bak
+        fi
     fi
-fi
-if [ ! -d "$HOME/.conky.d" ]; then
-    ln -s "$PWD/.conky.d" "$HOME/.conky.d"
-fi
 
-# TMUX
-if test -f "$HOME/.tmux.conf" && ! test -h "$HOME/.tmux.conf"; then mv "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak"; fi
-if ! test -f "$HOME/.tmux.conf"; then ln -s "$PWD/.tmux.conf" "$HOME/.tmux.conf"; fi
+    ln -s ${from} ${to}
+}
 
-# SHELL
-if [ -d "$HOME/.shell" ]; then
-    if ! test -h "$HOME/.shell"; then
-        mv "$HOME/.shell" "$HOME/.shell.bak/"
-    fi
-fi
-if [ ! -d "$HOME/.shell" ]; then
-    ln -s "$PWD/.shell" "$HOME/.shell"
-fi
+link ".shell"
+link ".conky.d"
+link ".zshrc"
+link ".tmux.conf"
+link ".profile"
+link ".npmrc"
+link ".gitconfig"
+link ".conkyrc"
