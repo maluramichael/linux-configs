@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
 
 echo "Link from $PWD to $HOME"
 
@@ -35,6 +39,10 @@ fi
 if [ ! -d "$HOME/.conky.d" ]; then
     ln -s "$PWD/.conky.d" "$HOME/.conky.d"
 fi
+
+# TMUX
+if test -f "$HOME/.tmux.conf" && ! test -h "$HOME/.tmux.conf"; then mv "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak"; fi
+if ! test -f "$HOME/.tmux.conf"; then ln -s "$PWD/.tmux.conf" "$HOME/.tmux.conf"; fi
 
 # SHELL
 if [ -d "$HOME/.shell" ]; then
