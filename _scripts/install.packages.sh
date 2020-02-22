@@ -1,4 +1,5 @@
 #!/bin/sh
+
 cd $HOME
 
 # ZSH
@@ -38,3 +39,6 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py --user
 pip install --upgrade pip
+
+sudo apt install linux-headers-$(uname -r)
+sudo apt install $(cat apt.packages.list)

@@ -4,5 +4,3 @@ cd $HOME
 mkdir -p development/libs
 mkdir -p development/projects
 mkdir -p tools
-
-./download-dev-libs.sh
