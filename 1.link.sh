@@ -6,7 +6,6 @@ set -o nounset
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" # script directory
 __file="${__dir}/$(basename "${BASH_SOURCE[0]}")" # script path
 __base="$(basename ${__file} .sh)" # script name
-
 __dotfiles="_dotfiles/"
 
 link(){

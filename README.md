@@ -3,19 +3,13 @@ My ~ configurations for linux
 
 # Getting started
 
-First install all packages.
 ```sh
 cd ~
-mkdir -p development
-cd development
-git clone git@github.com:maluramichael/linux-configs.git dot-files
-cd dot-files
-./install-packages.sh
+git clone git@github.com:maluramichael/linux-configs.git dotfiles
+cd dotfiles
+./0.prepare-home.sh
+./1.link.sh
+./2.install.packages.sh
+./3.clone.libs.sh
+./4.clone.tools.sh
 ```
-
-Then link configurations in to your home directory.
-```sh
-./link.sh
-```
-
-Done

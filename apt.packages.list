@@ -41,3 +41,6 @@ libssl-dev
 libsocksd0-dev
 libglew-dev
 liblua5.3-dev
+libncurses5-dev
+neovim
+tmux

@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+set -o nounset
 
 cd $HOME
 
@@ -18,6 +21,8 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zs
 # NVM
 mkdir ~/.nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+nvm install stable
+nvm use stable
 
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -39,6 +44,12 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py --user
 pip install --upgrade pip
+pip install virtualenv --user
+pip install http-prompt --user
+
+# Ruby
+#rbenv install 2.3.0
+#rbenv global 2.3.0
 
 sudo apt install linux-headers-$(uname -r)
 sudo apt install $(cat apt.packages.list)

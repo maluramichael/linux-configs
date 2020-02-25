@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+set -o nounset
 
 cd $HOME
 mkdir -p development/libs
