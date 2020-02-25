@@ -47,6 +47,9 @@ pip install --upgrade pip
 pip install virtualenv --user
 pip install http-prompt --user
 
+# Tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Ruby
 #rbenv install 2.3.0
 #rbenv global 2.3.0

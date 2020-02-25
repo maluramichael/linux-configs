@@ -1,10 +1,21 @@
 export ZSH="$HOME/.oh-my-zsh"
+
 ZSH_THEME="alanpeabody"
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_FIXTERM=true
+ZSH_TMUX_UNICODE=true
+
 COMPLETION_WAITING_DOTS="true"
 plugins=(
- git
+ git github gas
+ node nvm npm
+ pip python virtualenv
  docker
  debian
+ extract
+ history
+ rsync
+ tmux
  zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting zsh-completions
 )
 autoload -U compinit && compinit
