@@ -1,21 +1,32 @@
+#!/usr/bin/env bash
+
+CORES=$(nproc)
+
+# language settings
 export LANG=en_GB.UTF-8
 export LC_CTYPE=en_GB.UTF-8
 export LC_ALL=en_GB.UTF-8
 
+# useful working directories
 export DEV_HOME="$HOME/development"
+export WORKON_HOME=$DEV_HOME/virtualenvs
+export PROJECT_HOME=$DEV_HOME/projects
+
+# react
 export REACT_EDITOR=code
-export NVM_DIR="$HOME/.nvm"
 
-export CARGO_HOME="$HOME/.cargo"
-export PATH="$PATH:$CARGO_HOME/bin"
+# nodejs
+export NVM_DIR="$DEV_HOME/nvm"
 
-export MAKEFLAGS="-j8"
+# rust
+export CARGO_HOME="$DEV_HOME/cargo"
+export RUSTUP_HOME="$DEV_HOME/rustup"
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/.yarn/bin"
+# make
+export CC="gcc"
+export CXX="g++"
+export MAKEFLAGS="-j$CORES"
+export INSTALL_PREFIX="$HOME/.local"
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/development/projects
-
-if [ -f ~/.credentials.sh ]; then
-    source ~/.credentials.sh
-fi
+# set path variable
+export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$CARGO_HOME/bin:$PATH"
