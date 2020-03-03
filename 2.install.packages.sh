@@ -5,8 +5,10 @@ set -o nounset
 
 cd $HOME
 
+sudo apt install linux-headers-$(uname -r)
+sudo apt install $(cat apt.packages.list)
+
 # ZSH
-sudo apt install zsh -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended"
 
 # Ohy my zsh
@@ -19,10 +21,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 
 # NVM
-mkdir ~/.nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 nvm install stable
 nvm use stable
+(cd "$NVM_DIR" && git pull origin)
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Yarn
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -53,6 +58,3 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Ruby
 #rbenv install 2.3.0
 #rbenv global 2.3.0
-
-sudo apt install linux-headers-$(uname -r)
-sudo apt install $(cat apt.packages.list)
