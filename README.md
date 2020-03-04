@@ -1,7 +1,8 @@
 # linux-configs
+
 My ~ configurations for linux
 
-# Getting started
+## Getting started
 
 ```sh
 cd ~
@@ -10,6 +11,6 @@ cd dotfiles
 ./0.prepare-home.sh
 ./1.link.sh
 ./2.install.packages.sh
-./3.clone.libs.sh
-./4.clone.tools.sh
+./3.install.libs.sh
+./4.install.tools.sh
 ```
