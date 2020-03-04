@@ -1,11 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-cd $HOME
-
-rm ".shell"
-rm ".zshrc"
-rm ".npmrc"
-rm ".gitconfig"
-rm ".oh-my-zsh/themes/devnetik.zsh-theme"
-rm ".conkyrc"
-rm ".conky.d"
+# TODO
+# Like 1.link.sh find all linked files. Remove links and sync everything from _dotfiles into $HOME
