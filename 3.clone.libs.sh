@@ -8,7 +8,7 @@ cd "$LIBS_HOME" || return
 
 CMAKE_BUILD_TYPE="Release"
 
-llvm() {
+build_llvm() {
   if [ ! -d "$LIBS_HOME/llvm-project" ]; then
     git clone https://github.com/llvm/llvm-project.git
   else
@@ -27,7 +27,7 @@ llvm() {
   )
 }
 
-libpng() {
+build_libpng() {
   if [ ! -d "$LIBS_HOME/libpng" ]; then
     git clone https://git.code.sf.net/p/libpng/code libpng
   else
@@ -42,7 +42,7 @@ libpng() {
   )
 }
 
-cairo() {
+build_cairo() {
   if [ ! -d "$LIBS_HOME/cairo" ]; then
     git clone git://anongit.freedesktop.org/git/cairo
   else
@@ -57,7 +57,7 @@ cairo() {
   )
 }
 
-pixman() {
+build_pixman() {
   if [ ! -d "$LIBS_HOME/pixman" ]; then
     git clone git://anongit.freedesktop.org/git/pixman
   else
@@ -72,7 +72,7 @@ pixman() {
   )
 }
 
-sdl() {
+build_sdl() {
   for i in "SDL" "SDL_ttf" "SDL_image" "SDL_mixer" "SDL_net"; do
     if [ ! -d "$LIBS_HOME/$i" ]; then
       hg clone https://hg.libsdl.org/"$i"
@@ -88,7 +88,7 @@ sdl() {
   done
 }
 
-qt() {
+build_qt() {
   if [ ! -d "$LIBS_HOME/qt5" ]; then
     git clone --recurse-submodules git://code.qt.io/qt/qt5.git --jobs 8 --branch 5.12 qt5
   else
@@ -102,7 +102,7 @@ qt() {
   )
 }
 
-boost() {
+build_boost() {
   if [ ! -d "$LIBS_HOME/boost" ]; then
     git clone --recurse-submodules git@github.com:boostorg/boost.git
   else
@@ -115,7 +115,7 @@ boost() {
   )
 }
 
-opencv() {
+build_opencv() {
   if [ ! -d "$LIBS_HOME/opencv" ]; then
     git clone git@github.com:opencv/opencv.git
   else
@@ -126,21 +126,53 @@ opencv() {
     mkdir build
     cd build || return
     cmake -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
+    make
+    make install
   )
 }
 
-other() {
-  git clone git@github.com:ArashPartow/exprtk.git
-  git clone git@github.com:amrayn/easyloggingpp.git
-  git clone git@github.com:google/googletest.git
+build_kaitai_struct() {
+  if [ ! -d "$LIBS_HOME/kaitai_struct" ]; then
+    git clone --recursive https://github.com/kaitai-io/kaitai_struct.git
+  else
+    (
+      cd "$LIBS_HOME/kaitai_struct" || return
+      git pull
+      git submodule update --recursive
+    )
+  fi
+  (
+    cd kaitai_struct || return
+    sbt compilerJVM/debian:packageBin
+  )
 }
 
-llvm
-libpng
-cariro
-pixman
-sdl
-qt
-boost
-opencv
-other
+build_other() {
+  git clone git@github.com:ArashPartow/exprtk.git
+  git clone git@github.com:amrayn/easyloggingpp.git
+
+  if [ ! -d "$LIBS_HOME/gtest" ]; then
+    git clone git@github.com:google/googletest.git gtest
+  else
+    (cd "$LIBS_HOME/gtest" && git pull)
+  fi
+  (
+    cd gtest || return
+    mkdir build
+    cd build || return
+    cmake -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
+    make
+    make install
+  )
+}
+
+build_llvm
+build_libpng
+build_cariro
+build_pixman
+build_sdl
+build_qt
+build_boost
+build_opencv
+build_kaitai_struct
+build_other
