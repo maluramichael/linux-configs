@@ -3,92 +3,136 @@
 set -o pipefail
 set -o nounset
 
-cd "$HOME/development/libs" || return
+LIBS_HOME="$HOME/development/libs"
+cd "$LIBS_HOME" || return
 
 CMAKE_BUILD_TYPE="Release"
 
-build_cmake() {
-  build_dir="$1/build"
-  mkdir -p "$build_dir"
-  cmake _D -B"$build_dir" -H"$1"
-  (cd "$build_dir" && make && sudo make install)
+libpng() {
+  if [ ! -d "$LIBS_HOME/libpng" ]; then
+    git clone https://git.code.sf.net/p/libpng/code libpng
+  else
+    (cd "$LIBS_HOME/libpng" && git pull)
+  fi
+  (
+    cd libpng || return
+    ./autogen.sh
+    ./configure --prefix "$INSTALL_PREFIX"
+    make
+    make install
+  )
 }
 
-create_build_dir() {
-  build_dir="$1/build"
-  mkdir -p "$build_dir"
-  cd "$build_dir" || return
+cairo() {
+  if [ ! -d "$LIBS_HOME/cairo" ]; then
+    git clone git://anongit.freedesktop.org/git/cairo
+  else
+    (cd "$LIBS_HOME/cairo" && git pull)
+  fi
+  (
+    cd cairo || return
+    ./autogen.sh
+    ./configure --prefix "$INSTALL_PREFIX"
+    make
+    make install
+  )
 }
 
-build_sdl_lib() {
-  ./configure --prefix"$INSTALL_PREFIX"
-  make install
+pixman() {
+  if [ ! -d "$LIBS_HOME/pixman" ]; then
+    git clone git://anongit.freedesktop.org/git/pixman
+  else
+    (cd "$LIBS_HOME/pixman" && git pull)
+  fi
+  (
+    cd pixman || return
+    ./autogen.sh
+    ./configure --prefix "$INSTALL_PREFIX"
+    make
+    make install
+  )
 }
 
-# SDL
-hg clone https://hg.libsdl.org/SDL
-(
-  create_build_dir SDL
-  cmake -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
-)
+sdl() {
+  for i in "SDL" "SDL_ttf" "SDL_image" "SDL_mixer" "SDL_net"; do
+    if [ ! -d "$LIBS_HOME/$i" ]; then
+      hg clone https://hg.libsdl.org/"$i"
+    else
+      (cd "$LIBS_HOME/$i" && hg pull && hg update)
+    fi
+    (
+      cd "$i" || return
+      ./configure --prefix "$INSTALL_PREFIX"
+      make
+      make install
+    )
+  done
+}
 
-hg clone https://hg.libsdl.org/SDL_ttf
-(
-  create_build_dir SDL_ttf
-  build_sdl_lib
-)
+qt() {
+  if [ ! -d "$LIBS_HOME/qt5" ]; then
+    git clone --recurse-submodules git://code.qt.io/qt/qt5.git --jobs 8 --branch 5.12 qt5
+  else
+    (cd "$LIBS_HOME/qt5" && git pull)
+  fi
+  (
+    cd qt5 || return
+    ./configure -opensource -confirm-license -nomake examples -nomake tests -silent -prefix "$INSTALL_PREFIX/qt5"
+    make
+    make install
+  )
+}
 
-hg clone https://hg.libsdl.org/SDL_image
-(
-  create_build_dir SDL_image
-  build_sdl_lib
-)
+boost() {
+  if [ ! -d "$LIBS_HOME/boost" ]; then
+    git clone --recurse-submodules git@github.com:boostorg/boost.git
+  else
+    (cd "$LIBS_HOME/boost" && git pull)
+  fi
+  (
+    cd boost || return
+    ./bootstrap.sh --prefix="$INSTALL_PREFIX"
+    ./b2 -q -d0 install
+  )
+}
 
-hg clone https://hg.libsdl.org/SDL_mixer
-hg clone https://hg.libsdl.org/SDL_net
+opencv() {
+  if [ ! -d "$LIBS_HOME/opencv" ]; then
+    git clone git@github.com:opencv/opencv.git
+  else
+    (cd "$LIBS_HOME/opencv" && git pull)
+  fi
+  (
+    cd opencv || return
+    mkdir build
+    cd build || return
+    cmake -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
+  )
+}
 
-# QT
-mkdir -p qt/source
-mkdir -p qt/build
-(
-  cd qt/source || return
-  git clone --recurse-submodules git://code.qt.io/qt/qt5.git --branch 5.12 .
-  cd ../build || return
-  ../source/configure -opensource -nomake examples -nomake tests -prefix "$INSTALL_PREFIX/qt5"
-  make install
-)
+other() {
+  git clone git@github.com:ArashPartow/exprtk.git
+  git clone git@github.com:amrayn/easyloggingpp.git
+  git clone git@github.com:google/googletest.git
+}
 
-# BOOST
-git clone --recurse-submodules git@github.com:boostorg/boost.git
-(
-  cd boost || return
-  ./bootstrap.sh --prefix="$INSTALL_PREFIX"
-  ./b2 -q -d0 install
-)
+llvm() {
+  if [ ! -d "$LIBS_HOME/llvm-project" ]; then
+    git clone https://github.com/llvm/llvm-project.git
+  else
+    (cd "$LIBS_HOME/llvm-project" && git pull)
+  fi
+  (
+    cd llvm-project || return
+    mkdir build
+    cd build || return
+    cmake \
+      -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" \
+      -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" \
+      -DLLVM_ENABLE_PROJECTS=clang \
+      ../llvm
+    make install
+  )
+}
 
-# OpenCV
-git clone git@github.com:opencv/opencv.git
-(
-  cd opencv || return
-  mkdir build
-  cd build || return
-  cmake -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
-)
-
-# Other
-git clone git@github.com:ArashPartow/exprtk.git
-git clone git@github.com:amrayn/easyloggingpp.git
-git clone git@github.com:google/googletest.git
-
-git clone https://github.com/llvm/llvm-project.git
-(
-  cd llvm-project || return
-  mkdir build
-  cd build || return
-  cmake \
-    -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" \
-    -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" \
-    -DLLVM_ENABLE_PROJECTS=clang \
-    ../llvm
-  make install
-)
+libpng
