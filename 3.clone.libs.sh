@@ -8,6 +8,25 @@ cd "$LIBS_HOME" || return
 
 CMAKE_BUILD_TYPE="Release"
 
+llvm() {
+  if [ ! -d "$LIBS_HOME/llvm-project" ]; then
+    git clone https://github.com/llvm/llvm-project.git
+  else
+    (cd "$LIBS_HOME/llvm-project" && git pull)
+  fi
+  (
+    cd llvm-project || return
+    mkdir build
+    cd build || return
+    cmake \
+      -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" \
+      -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" \
+      -DLLVM_ENABLE_PROJECTS=clang \
+      ../llvm
+    make install
+  )
+}
+
 libpng() {
   if [ ! -d "$LIBS_HOME/libpng" ]; then
     git clone https://git.code.sf.net/p/libpng/code libpng
@@ -116,23 +135,12 @@ other() {
   git clone git@github.com:google/googletest.git
 }
 
-llvm() {
-  if [ ! -d "$LIBS_HOME/llvm-project" ]; then
-    git clone https://github.com/llvm/llvm-project.git
-  else
-    (cd "$LIBS_HOME/llvm-project" && git pull)
-  fi
-  (
-    cd llvm-project || return
-    mkdir build
-    cd build || return
-    cmake \
-      -DCMAKE_BUILD_TYPE="$CMAKE_BUILD_TYPE" \
-      -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" \
-      -DLLVM_ENABLE_PROJECTS=clang \
-      ../llvm
-    make install
-  )
-}
-
+llvm
 libpng
+cariro
+pixman
+sdl
+qt
+boost
+opencv
+other
