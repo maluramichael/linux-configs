@@ -60,6 +60,7 @@ i  flex - fast lexical analyzer generator
 i  fontconfig - generic font configuration library - support binaries
 i  fonts-powerline - prompt and statusline utility (symbols font)
 i  fslint - Utility collection to find and fix common errors in file storage
+i  fzf - general-purpose command-line fuzzy finder
 i  g++-arm-linux-gnueabihf - GNU C++ compiler for the armhf architecture
 i  gcc-8-base - GCC, the GNU Compiler Collection (base package)
 i  gdb-multiarch - GNU Debugger (with support for multiple architectures)
@@ -95,6 +96,7 @@ i  iptables - administration tools for packet filtering and NAT
 i  iputils-ping - Tools to test the reachability of network hosts
 i  isc-dhcp-client - DHCP client for automatically obtaining an IP address
 i  isc-dhcp-common - common manpages relevant to all of the isc-dhcp packages
+i  kaitai-struct-compiler - compiler to generate binary data parsers in C++/STL, C#, Java, JavaScript, Lua, Perl, PHP, Python, Ruby
 i  kazam - screencast and screenshot application created with design in mind
 i  keepass2 - Password manager
 i  keyboard-configuration - system-wide keyboard preferences
@@ -154,6 +156,7 @@ i  libfluidsynth-dev - Real-time MIDI software synthesizer (development files)
 i  libfreetype6-dev - FreeType 2 font engine, development files
 i  libgcc1 - GCC support library
 i  libgcrypt20 - LGPL Crypto library - runtime library
+i  libgdiplus - interface library for System.Drawing of Mono
 i  libgl1-mesa-dev - free implementation of the OpenGL API -- GLX development files
 i  libgles1 - Vendor neutral GL dispatch library -- GLESv1 support
 i  libgles2 - Vendor neutral GL dispatch library -- GLESv2 support
