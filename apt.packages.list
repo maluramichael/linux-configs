@@ -21,6 +21,7 @@ i  bsdutils - basic utilities from 4.4BSD-Lite
 i  build-essential - Informational list of build-essential packages
 i  busybox - Tiny utilities for small and embedded systems
 i  ccache - Compiler cache for fast recompilation of C/C++ code
+i  clang-tidy - clang-based C++ linter tool
 i  cmake - cross-platform, open-source make system
 i  cmake-qt-gui - Qt based user interface for CMake (cmake-gui)
 i  code - Code editing. Redefined.
@@ -31,6 +32,7 @@ i  cpio - GNU cpio -- a program to manage archives of files
 i  cppcheck - tool for static C/C++ code analysis (CLI)
 i  cron - process scheduling daemon
 i  curl - command line tool for transferring data with URL syntax
+i  cvs - Concurrent Versions System
 i  dash - POSIX-compliant shell
 i  dbus - simple interprocess messaging system (daemon and utilities)
 i  debconf - Debian configuration management system
@@ -55,6 +57,7 @@ i  enlightenment-data - X11 window manager based on EFL - run time data files
 i  fbreader - e-book reader
 i  fdisk - collection of partitioning utilities
 i  ffmpeg - Tools for transcoding, streaming and playing of multimedia files
+i  figlet - Make large character ASCII banners out of ordinary text
 i  findutils - utilities for finding files--find, xargs
 i  flex - fast lexical analyzer generator
 i  fontconfig - generic font configuration library - support binaries
@@ -153,6 +156,7 @@ i  libfdisk1 - fdisk partitioning library
 i  libffi6 - Foreign Function Interface library runtime
 i  libflac-dev - Free Lossless Audio Codec - C development library
 i  libfluidsynth-dev - Real-time MIDI software synthesizer (development files)
+i  libfreetype6 - FreeType 2 font engine, shared library files
 i  libfreetype6-dev - FreeType 2 font engine, development files
 i  libgcc1 - GCC support library
 i  libgcrypt20 - LGPL Crypto library - runtime library
@@ -249,6 +253,7 @@ i  libtext-iconv-perl - converts between character sets in Perl
 i  libtext-wrapi18n-perl - internationalized substitute of Text::Wrap
 i  libtiff-dev - Tag Image File Format library (TIFF), development files
 i  libtinfo6 - shared low-level terminfo library for terminal handling
+i  libtool - Generic library support script
 i  libudev-dev - libudev development files
 i  libudev1 - libudev shared library
 i  libunistring2 - Unicode string library for C
@@ -300,6 +305,7 @@ i  nmap - The Network Mapper
 i  nuget - Package manager for NuGet repos - executable
 i  nvidia-legacy-340xx-driver - NVIDIA metapackage (340xx legacy version)
 i  ocs-url - OCS-URL
+i  octave - GNU Octave language for numerical computations
 i  openssh-client - secure shell (SSH) client, for secure access to remote machines
 i  passwd - change and administer password and group data
 i  pciutils - Linux PCI Utilities
@@ -314,17 +320,24 @@ i  python - interactive high-level object-oriented language (Python2 version)
 i  python-minimal - minimal subset of the Python2 language
 i  python2.7 - Interactive high-level object-oriented language (version 2.7)
 i  python3-reportbug - Python modules for interacting with bug tracking systems
+i  r-base - GNU R statistical computation and graphics system
 i  readline-common - GNU readline and history libraries, common files
+i  redshift - Adjusts the color temperature of your screen
+i  remind - sophisticated calendar and alarm program
 i  reportbug - reports bugs in the Debian distribution
 i  rsync - fast, versatile, remote (and local) file-copying tool
 i  rsyslog - reliable system and kernel logging daemon
+i  sagemath - Open Source Mathematical Software
+i  sagetex - Embed Sage code and plots into LaTeX
 i  sassc - C/C++ port of the Sass CSS precompiler - command-line tool
 i  sbt - sbt, the interactive build tool
+i  scilab - Scientific software package for numerical computations
 i  scons - replacement for make
 i  sed - GNU stream editor for filtering/transforming text
 i  sensible-utils - Utilities for sensible alternative selection
 i  shellcheck - lint tool for shell scripts
 i  shim-signed - Secure Boot chain-loading bootloader (Microsoft-signed binary)
+i  subversion - Advanced version control system
 i  systemd - system and service manager
 i  systemd-sysv - system and service manager - SysV links
 i  sysvinit-utils - System-V-like utilities

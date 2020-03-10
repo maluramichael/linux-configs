@@ -9,8 +9,10 @@ export LC_ALL=en_GB.UTF-8
 
 # useful working directories
 export DEV_HOME="$HOME/development"
-export WORKON_HOME=$DEV_HOME/virtualenvs
-export PROJECT_HOME=$DEV_HOME/projects
+export WORKON_HOME="$DEV_HOME/virtualenvs"
+export PROJECT_HOME="$DEV_HOME/projects"
+export LIBS_HOME="$DEV_HOME/libs"
+export TOOLS_HOME="$HOME/tools"
 
 # react
 export REACT_EDITOR=code
