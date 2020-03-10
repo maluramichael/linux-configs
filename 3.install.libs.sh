@@ -18,9 +18,9 @@ done
 
 scripts=$(dialog --separate-output --checklist "Select options:" 50 50 30 "${libs[@]}" --output-fd 1)
 
-for script in "${scripts[@]}"; do
+for script in $scripts; do
   if [ -x "$(command -v figlet)" ]; then
     figlet "${script}"
   fi
-  bash "${script}.sh" -H || break
+  bash "${__dir}/_libs/${script}.sh" -H || break
 done
