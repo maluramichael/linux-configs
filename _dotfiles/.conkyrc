@@ -2,7 +2,7 @@ conky.config = {
     lua_load = '/home/michael/.conky.d/processes.lua',
 
     background = true,
-    update_interval = 10,
+    update_interval = 5,
     double_buffer = true,
     no_buffers = true,
     imlib_cache_size = 10,
@@ -50,7 +50,6 @@ conky.config = {
 }
 
 conky.text = [[
-Updates ${updates}
 ${color2}[CPU]${color}
 ${lua_parse cpus}
 

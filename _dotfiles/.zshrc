@@ -17,6 +17,7 @@ plugins=(
  history
  rsync
  tmux
+ fzf
  zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting zsh-completions
 )
 autoload -U compinit && compinit
