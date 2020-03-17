@@ -5,7 +5,7 @@ set -o pipefail
 set -o nounset
 shopt -s nullglob
 
-__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" # script directory
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$__dir/_libs" || return
 libs=()
@@ -13,10 +13,10 @@ libs=()
 index=0
 for script in *.sh; do
   libs+=("${script%.sh}" "" off)
-  ((index+=1))
+  ((index += 1))
 done
 
-scripts=$(dialog --separate-output --checklist "Select options:" 50 50 30 "${libs[@]}" --output-fd 1)
+scripts=$(dialog --separate-output --checklist "Select options:" 30 50 30 "${libs[@]}" --output-fd 1)
 
 for script in $scripts; do
   if [ -x "$(command -v figlet)" ]; then
