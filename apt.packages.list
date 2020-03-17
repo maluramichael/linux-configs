@@ -21,10 +21,12 @@ i  bsdutils - basic utilities from 4.4BSD-Lite
 i  build-essential - Informational list of build-essential packages
 i  busybox - Tiny utilities for small and embedded systems
 i  ccache - Compiler cache for fast recompilation of C/C++ code
+i  chrome-gnome-shell - GNOME Shell extensions integration for web browsers
 i  clang-tidy - clang-based C++ linter tool
 i  cmake - cross-platform, open-source make system
 i  cmake-qt-gui - Qt based user interface for CMake (cmake-gui)
 i  code - Code editing. Redefined.
+i  conky-all - highly configurable system monitor (all features enabled)
 i  console-setup - console font and keymap setup program
 i  context - powerful TeX format
 i  coreutils - GNU core utilities
@@ -54,6 +56,9 @@ i  dpkg - Debian package management system
 i  e2fsprogs - ext2/ext3/ext4 file system utilities
 i  enlightenment - X11 window manager based on EFL
 i  enlightenment-data - X11 window manager based on EFL - run time data files
+i  enpass - A cross-platform, complete password management solution that securely manages passwords and all other life important credentials like bank accounts, Credit cards, IDs, passport, driving licenses etc. Everything is saved locally on user device and optionally he can sync through other devices using his accounts of Dropbox, Box, Google Drive, OneDrive and ownCloud.
+i  exa - Modern replacement for ls
+i  fahclient - Folding@home Console Client
 i  fbreader - e-book reader
 i  fdisk - collection of partitioning utilities
 i  ffmpeg - Tools for transcoding, streaming and playing of multimedia files
@@ -66,12 +71,16 @@ i  fslint - Utility collection to find and fix common errors in file storage
 i  fzf - general-purpose command-line fuzzy finder
 i  g++-arm-linux-gnueabihf - GNU C++ compiler for the armhf architecture
 i  gcc-8-base - GCC, the GNU Compiler Collection (base package)
+i  gconf-editor - editor for the GConf configuration system
 i  gdb-multiarch - GNU Debugger (with support for multiple architectures)
 i  gdbm-l10n - GNU dbm database routines (translation files) 
 i  gddrescue - GNU data recovery tool
+i  gdm3 - GNOME Display Manager
 i  gettext-base - GNU Internationalization utilities for the base system
 i  git - fast, scalable, distributed revision control system
 i  gitg - git repository viewer
+i  gnome-session - GNOME Session Manager - GNOME 3 session
+i  gnome-shell-extensions - Extensions to extend functionality of GNOME Shell
 i  gnome-terminal - GNOME terminal emulator application
 i  gnome-tweak-tool - adjust advanced settings for GNOME - transitional package
 i  gnome-tweaks - tool to adjust advanced configuration settings for GNOME
@@ -145,6 +154,7 @@ i  libdevmapper1.02.1 - Linux Kernel Device Mapper userspace library
 i  libdns-export1104 - Exported DNS Shared Library
 i  libeasyloggingpp-dev - single-header logging library for C++ applications
 i  libeigen3-dev - lightweight C++ template library for linear algebra
+i  libelf-dev - libelf1 development libraries and header files
 i  libelf1 - library to read and write ELF files
 i  libestr0 - Helper functions for handling strings (lib)
 i  libext2fs2 - ext2/ext3/ext4 file system libraries
@@ -192,6 +202,7 @@ i  liblockfile-bin - support binaries for and cli utilities based on liblockfile
 i  liblognorm5 - log normalizing library
 i  liblua5.3-dev - Development files for the Lua language version 5.3
 i  liblz4-1 - Fast LZ compression algorithm library - runtime
+i  liblz4-dev - Fast LZ compression algorithm library - development files
 i  liblzma5 - XZ-format compression library
 i  libmnl0 - minimalistic Netlink communication library
 i  libmodplug-dev - development files for mod music based on ModPlug
@@ -270,6 +281,9 @@ i  libxslt1-dev - XSLT 1.0 processing library - development kit
 i  libxtables12 - netfilter xtables library
 i  libxtst-dev - X11 Record extension library (development headers)
 i  libzstd1 - fast lossless compression algorithm
+i  lightdm - simple display manager
+i  lightdm-gtk-greeter - simple display manager (GTK+ greeter)
+i  lightdm-gtk-greeter-settings - settings editor for the LightDM GTK+ Greeter
 i  linux-headers-4.19.0-6-all - All header files for Linux 4.19 (meta-package)
 i  linux-headers-amd64 - Header files for Linux amd64 configuration (meta-package)
 i  linux-image-amd64 - Linux for 64-bit PCs (meta-package)
@@ -320,6 +334,8 @@ i  python - interactive high-level object-oriented language (Python2 version)
 i  python-minimal - minimal subset of the Python2 language
 i  python2.7 - Interactive high-level object-oriented language (version 2.7)
 i  python3-reportbug - Python modules for interacting with bug tracking systems
+i  qemu - fast processor emulator, dummy package
+i  quiterss - RSS/Atom news feeds reader
 i  r-base - GNU R statistical computation and graphics system
 i  readline-common - GNU readline and history libraries, common files
 i  redshift - Adjusts the color temperature of your screen
@@ -337,6 +353,7 @@ i  sed - GNU stream editor for filtering/transforming text
 i  sensible-utils - Utilities for sensible alternative selection
 i  shellcheck - lint tool for shell scripts
 i  shim-signed - Secure Boot chain-loading bootloader (Microsoft-signed binary)
+i  slick-greeter - Slick-looking LightDM greeter
 i  subversion - Advanced version control system
 i  systemd - system and service manager
 i  systemd-sysv - system and service manager - SysV links
@@ -412,6 +429,7 @@ i  texlive-science - TeX Live: Mathematics, natural sciences, computer science p
 i  texlive-science-doc - TeX Live: Documentation files for texlive-science
 i  texlive-xetex - TeX Live: XeTeX and packages
 i  tightvncserver - virtual network computing server software
+i  tiled - general purpose tile map editor
 i  tmux - terminal multiplexer
 i  traceroute - Traces the route taken by packets over an IPv4/IPv6 network
 i  tzdata - time zone and daylight-saving time data
@@ -428,8 +446,7 @@ i  wamerican - American English dictionary words for /usr/share/dict
 i  wget - retrieves files from the web
 i  whiptail - Displays user-friendly dialog boxes from shell scripts
 i  wireshark - network traffic analyzer - meta-package
-i  xfce4 - Meta-package for the Xfce Lightweight Desktop Environment
-i  xfce4-goodies - enhancements for the Xfce4 Desktop Environment
+i  xclip - command line interface to X selections
 i  xfonts-100dpi - 100 dpi fonts for X
 i  xfonts-100dpi-transcoded - 100 dpi fonts for X (transcoded from ISO 10646-1)
 i  xfonts-75dpi - 75 dpi fonts for X
