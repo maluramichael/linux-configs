@@ -9,8 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec --no-startup-id dunst
-exec --no-startup-id feh --randomize --bg-fill ~/Pictures/_wallpaper/*
+exec --no-startup-id feh --randomize --bg-fill $HOME/Pictures/_wallpaper/*
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id dunst &
 
 set $mod Mod4
 
@@ -121,12 +122,13 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 bindsym $mod+p workspace prev
+bindsym $mod+Ctrl+Left workspace prev
+
 bindsym $mod+n workspace next
+bindsym $mod+Ctrl+Right workspace next
 
 bindsym $mod+shift+n move to workspace next
 bindsym $mod+shift+p move to workspace prev
-
-bindsym $mod+x new workspace
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -159,30 +161,30 @@ new_window pixel1
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-  # These bindings trigger as soon as you enter the resize mode
-
-  # Pressing left will shrink the window’s width.
-  # Pressing right will grow the window’s width.
-  # Pressing up will shrink the window’s height.
-  # Pressing down will grow the window’s height.
-  bindsym j resize shrink width 10 px or 10 ppt
-  bindsym k resize grow height 10 px or 10 ppt
-  bindsym l resize shrink height 10 px or 10 ppt
-  bindsym semicolon resize grow width 10 px or 10 ppt
-
-  # same bindings, but for the arrow keys
-  bindsym Left resize shrink width 2 px or 2 ppt
-  bindsym Down resize grow height 2 px or 2 ppt
-  bindsym Up resize shrink height 2 px or 2 ppt
-  bindsym Right resize grow width 2 px or 2 ppt
-
-  # back to normal: Enter or Escape or $mod+r
   bindsym Return mode "default"
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+bindsym $mod+Mod1+Left  resize shrink width  2 px or 2 ppt
+bindsym $mod+Mod1+Down  resize grow   height 2 px or 2 ppt
+bindsym $mod+Mod1+Up    resize shrink height 2 px or 2 ppt
+bindsym $mod+Mod1+Right resize grow   width  2 px or 2 ppt
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 set $background #DC143C
 
@@ -198,24 +200,38 @@ client.background       #000000
 gaps inner 10
 gaps outer 0
 
-bar {
-  position top
-  separator_symbol " > "
-  font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-  #font pango:DejaVu Sans Mono 10
+workspace $ws1 gaps top 34
+workspace $ws2 gaps top 34
+workspace $ws3 gaps top 34
+workspace $ws4 gaps top 34
+workspace $ws5 gaps top 34
+workspace $ws6 gaps top 34
+workspace $ws7 gaps top 34
+workspace $ws8 gaps top 34
+workspace $ws9 gaps top 34
+workspace $ws10 gaps top 34
 
-  colors {
-    statusline #ffffff
-    background #111111
-    separator #ffffff
-
-    focused_workspace  $background $background #5D3241
-    active_workspace   #333333 #5f676a         #ffffff
-    inactive_workspace #333333 #222222         #888888
-    urgent_workspace   #2f343a #900000         #ffffff
-
-    binding_mode       #2f343a #900000         #ffffff
-  }
-
-  status_command i3status
-}
+# bar {
+#   mode hide
+#   hidden_state hide
+#   modifier off
+#   position top
+#   separator_symbol " > "
+#   font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#   #font pango:DejaVu Sans Mono 10
+#
+#   colors {
+#     statusline #ffffff
+#     background #111111
+#     separator #ffffff
+#
+#     focused_workspace  $background $background #5D3241
+#     active_workspace   #333333 #5f676a         #ffffff
+#     inactive_workspace #333333 #222222         #888888
+#     urgent_workspace   #2f343a #900000         #ffffff
+#
+#     binding_mode       #2f343a #900000         #ffffff
+#   }
+#
+#   status_command i3status
+# }

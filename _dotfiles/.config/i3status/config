@@ -6,7 +6,14 @@ general {
 
 order += "disk /"
 order += "load"
-order += "tztime berlin"
+order += "volume master"
+
+volume master {
+    format = "♪: %volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
 
 wireless wlan0 {
   format_up = "W: (%quality at %essid, %bitrate) %ip"
