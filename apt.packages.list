@@ -1,5 +1,7 @@
 i  adduser - add and remove users and groups
+i  aisleriot - GNOME solitaire card game collection
 i  alacarte - easy GNOME menu editing tool
+i  albatross-gtk-theme - dark and light GTK+ theme from the Shimmer Project
 i  apt - commandline package manager
 i  apt-file - search for files within Debian packages (command-line interface)
 i  apt-listchanges - package change history notification tool
@@ -7,8 +9,10 @@ i  apt-transport-https - transitional package for https support
 i  apt-utils - package management related utility programs
 i  aptitude - terminal-based package manager
 i  asciinema - Record and share your terminal sessions, the right way
+i  atop - Monitor for system resources and process activity
 i  autoconf - automatic configure script builder
 i  automake - Tool for generating GNU Standards-compliant Makefiles
+i  awesome - highly configurable X window manager
 i  babeledit - Powerful translation editor for Angular, React and other JSON translation files
 i  base-files - Debian base system miscellaneous files
 i  base-passwd - Debian base system master password and group files
@@ -16,16 +20,30 @@ i  bash - GNU Bourne Again SHell
 i  bash-completion - programmable completion for the bash shell
 i  bind9-host - DNS lookup utility (deprecated)
 i  bison - YACC-compatible parser generator
+i  blackbird-gtk-theme - dark GTK+ theme from the Shimmer Project
+i  bluebird-gtk-theme - blue GTK+ theme from the Shimmer Project
+i  brasero - CD/DVD burning application for GNOME
+i  brasero-cdrkit - cdrkit extensions for the Brasero burning application
 i  bsdmainutils - collection of more utilities from FreeBSD
 i  bsdutils - basic utilities from 4.4BSD-Lite
 i  build-essential - Informational list of build-essential packages
 i  busybox - Tiny utilities for small and embedded systems
 i  ccache - Compiler cache for fast recompilation of C/C++ code
+i  cdrdao - records CDs in Disk-At-Once (DAO) mode
+i  check - unit test framework for C
+i  cheese - tool to take pictures and videos from your webcam
 i  chrome-gnome-shell - GNOME Shell extensions integration for web browsers
 i  clang-tidy - clang-based C++ linter tool
+i  cloc - statistics utility to count lines of code
 i  cmake - cross-platform, open-source make system
 i  cmake-qt-gui - Qt based user interface for CMake (cmake-gui)
 i  code - Code editing. Redefined.
+i  coinor-libcbc3 - Coin-or branch-and-cut mixed integer programming solver (shared libraries)
+i  coinor-libcgl1 - COIN-OR Cut Generation Library
+i  coinor-libclp1 - Coin-or linear programming solver (shared libraries)
+i  coinor-libcoinmp1v5 - Simple C API for COIN-OR Solvers Clp and Cbc -- library
+i  coinor-libcoinutils3v5 - Coin-or collection of utility classes (binaries and libraries)
+i  coinor-libosi1v5 - COIN-OR Open Solver Interface
 i  conky-all - highly configurable system monitor (all features enabled)
 i  console-setup - console font and keymap setup program
 i  context - powerful TeX format
@@ -43,6 +61,7 @@ i  debian-archive-keyring - GnuPG archive keys of the Debian archive
 i  debian-faq - Debian Frequently Asked Questions
 i  debianutils - Miscellaneous utilities specific to Debian
 i  dialog - Displays user-friendly dialog boxes from shell scripts
+i  diffstat - produces graph of changes introduced by a diff file
 i  diffutils - File comparison utilities
 i  dirmngr - GNU privacy guard - network certificate management service
 i  discover - hardware identification system
@@ -53,20 +72,25 @@ i  dotnet-runtime-3.1 - Microsoft .NET Core Runtime - 3.1.2 Microsoft.NETCore.Ap
 i  dotnet-sdk-3.1 - Microsoft .NET Core SDK 3.1.102
 i  doxygen - Documentation system for C, C++, Java, Python and other languages
 i  dpkg - Debian package management system
+i  dwm - dynamic window manager
+i  dzen2 - General-purpose messaging and notification program for X11
 i  e2fsprogs - ext2/ext3/ext4 file system utilities
 i  enlightenment - X11 window manager based on EFL
 i  enlightenment-data - X11 window manager based on EFL - run time data files
 i  enpass - A cross-platform, complete password management solution that securely manages passwords and all other life important credentials like bank accounts, Credit cards, IDs, passport, driving licenses etc. Everything is saved locally on user device and optionally he can sync through other devices using his accounts of Dropbox, Box, Google Drive, OneDrive and ownCloud.
+i  espeak-ng-data - Multi-lingual software speech synthesizer: speech data files
 i  exa - Modern replacement for ls
-i  fahclient - Folding@home Console Client
 i  fbreader - e-book reader
 i  fdisk - collection of partitioning utilities
+i  feh - imlib2 based image viewer
 i  ffmpeg - Tools for transcoding, streaming and playing of multimedia files
 i  figlet - Make large character ASCII banners out of ordinary text
 i  findutils - utilities for finding files--find, xargs
+ih five-or-more - make color lines of five or more length
 i  flex - fast lexical analyzer generator
 i  fontconfig - generic font configuration library - support binaries
 i  fonts-powerline - prompt and statusline utility (symbols font)
+ih four-in-a-row - Four in a Row game for GNOME
 i  fslint - Utility collection to find and fix common errors in file storage
 i  fzf - general-purpose command-line fuzzy finder
 i  g++-arm-linux-gnueabihf - GNU C++ compiler for the armhf architecture
@@ -75,25 +99,92 @@ i  gconf-editor - editor for the GConf configuration system
 i  gdb-multiarch - GNU Debugger (with support for multiple architectures)
 i  gdbm-l10n - GNU dbm database routines (translation files) 
 i  gddrescue - GNU data recovery tool
+i  gdebi - simple tool to view and install deb files - GNOME GUI
+i  gdebi-core - simple tool to install deb files
 i  gdm3 - GNOME Display Manager
+i  gedit - official text editor of the GNOME desktop environment
+i  gedit-common - official text editor of the GNOME desktop environment (support files)
+i  gedit-plugin-bookmarks - Bookmarks plugin for gedit
+i  gedit-plugin-bracket-completion - Bracket Completion plugin for gedit
+i  gedit-plugin-character-map - Character Map plugin for gedit
+i  gedit-plugin-code-comment - Code Comment plugin for gedit
+i  gedit-plugin-color-picker - Color Picker plugin for gedit
+i  gedit-plugin-color-schemer - Color Schemer plugin for gedit
+i  gedit-plugin-commander - Commander plugin for gedit
+i  gedit-plugin-draw-spaces - Draw Spaces plugin for gedit
+i  gedit-plugin-find-in-files - Find in Files plugin for gedit
+i  gedit-plugin-git - Git plugin for gedit
+i  gedit-plugin-join-lines - Join/Split Lines plugin for gedit
+i  gedit-plugin-multi-edit - Multi Edit plugin for gedit
+i  gedit-plugin-smart-spaces - Smart Spaces plugin for gedit
+i  gedit-plugin-synctex - SyncTex plugin for gedit
+i  gedit-plugin-terminal - Terminal plugin for gedit
+i  gedit-plugin-translate - Translate plugin for gedit
+i  gedit-plugin-word-completion - Word Completion plugin for gedit
+i  gedit-plugin-zeitgeist - Zeitgeist plugin for gedit
+i  gedit-plugins - set of plugins for gedit
+i  gedit-plugins-common - common files for gedit-plugins
 i  gettext-base - GNU Internationalization utilities for the base system
+i  gir1.2-ggit-1.0 - GObject introspection data for the git2-glib-1.0 library
+i  gir1.2-gucharmap-2.90 - GObject introspection data for the Unicode browser widget library
+i  gir1.2-javascriptcoregtk-4.0 - JavaScript engine library from WebKitGTK - GObject introspection data
+i  gir1.2-packagekitglib-1.0 - GObject introspection data for the PackageKit GLib library
+i  gir1.2-rb-3.0 - GObject introspection data for the rhythmbox music player
+i  gir1.2-webkit2-4.0 - Web content engine library for GTK - GObject introspection data
 i  git - fast, scalable, distributed revision control system
 i  gitg - git repository viewer
+i  glances - Curses-based monitoring tool
+ih gnome-chess - simple chess game
+ih gnome-disk-utility - manage and configure disk drives and media
+ih gnome-font-viewer - font viewer for GNOME
+ih gnome-games - games for the GNOME desktop
+ih gnome-klotski - Klotski puzzle game for GNOME
+ih gnome-mahjongg - classic Eastern tile game for GNOME
+ih gnome-mines - popular minesweeper puzzle game for GNOME
+ih gnome-nibbles - snake game, up to four players
+ih gnome-robots - improved old BSD robots game
 i  gnome-session - GNOME Session Manager - GNOME 3 session
+i  gnome-session-common - GNOME Session Manager - common files
 i  gnome-shell-extensions - Extensions to extend functionality of GNOME Shell
+ih gnome-sound-recorder - simple and modern sound recorder for GNOME
+ih gnome-sudoku - Sudoku puzzle game for GNOME
+ih gnome-system-monitor - Process viewer and system resource monitor for GNOME
+ih gnome-taquin - game to move tiles so that they reach their places
 i  gnome-terminal - GNOME terminal emulator application
+ih gnome-tetravex - put tiles on a board and match their edges together
 i  gnome-tweak-tool - adjust advanced settings for GNOME - transitional package
 i  gnome-tweaks - tool to adjust advanced configuration settings for GNOME
+ih gnome-video-effects - Collection of GStreamer effects
+i  gnote - desktop note taking program using Wiki style links
 i  gperf - Perfect hash function generator
 i  gpgv - GNU privacy guard - signature verification tool
 i  grep - GNU grep, egrep and fgrep
+i  greybird-gtk-theme - grey GTK+ theme from the Shimmer Project
 i  groff-base - GNU troff text-formatting system (base system components)
 i  grub-common - GRand Unified Bootloader (common files)
 i  grub-efi-amd64 - GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+i  gstreamer1.0-gtk3 - GStreamer plugin for GTK+3
+i  gstreamer1.0-nice - ICE library (GStreamer plugin)
+i  gtk2-engines - theme engines for GTK+ 2.x
+i  gvfs - userspace virtual filesystem - GIO module
+i  gvfs-bin - userspace virtual filesystem - deprecated command-line tools
+i  gvfs-daemons - userspace virtual filesystem - servers
+i  gvfs-fuse - userspace virtual filesystem - fuse server
 i  gzip - GNU compression utilities
 i  hdparm - tune hard disk parameters for high performance
+i  hexchat - IRC client for X based on X-Chat 2
+i  hexchat-common - Common files for HexChat
+i  hexchat-perl - Perl plugin for HexChat
+i  hexchat-plugins - Common plugins for HexChat
+i  hexchat-python3 - Python 3 plugin for HexChat
+i  hitori - logic puzzle game similar to sudoku
+i  hoichess - xboard compatible chess engine to play chess with
 i  hostname - utility to set/show the host name or domain name
 i  htop - interactive processes viewer
+i  i3-wm - improved dynamic tiling window manager
+i  i3status - Generates a status line for dzen2, xmobar or i3bar
+i  iagno - popular Othello game for GNOME
+i  iftop - displays bandwidth usage information on an network interface
 i  ifupdown - high level tools to configure network interfaces
 i  imagemagick - image manipulation programs -- binaries
 i  init - metapackage ensuring an init system is installed
@@ -108,6 +199,7 @@ i  iptables - administration tools for packet filtering and NAT
 i  iputils-ping - Tools to test the reachability of network hosts
 i  isc-dhcp-client - DHCP client for automatically obtaining an IP address
 i  isc-dhcp-common - common manpages relevant to all of the isc-dhcp packages
+i  jq - lightweight and flexible command-line JSON processor
 i  kaitai-struct-compiler - compiler to generate binary data parsers in C++/STL, C#, Java, JavaScript, Lua, Perl, PHP, Python, Ruby
 i  kazam - screencast and screenshot application created with design in mind
 i  keepass2 - Password manager
@@ -119,10 +211,14 @@ i  laptop-detect - system chassis type checker
 i  less - pager program similar to more
 i  lib3ds-dev - Autodesk 3D Studio file reader development files
 i  libacl1 - access control list - shared library
+i  libao-common - Cross Platform Audio Output Library (Common files)
+i  libao4 - Cross Platform Audio Output Library
 i  libapparmor1 - changehat AppArmor library
+i  libappstream4 - Library to access AppStream services
 i  libapt-inst2.0 - deb package format runtime library
 i  libapt-pkg5.0 - package management runtime library
 i  libargon2-1 - memory-hard hashing function - runtime library
+i  libatk-adaptor - AT-SPI 2 toolkit bridge
 i  libatlas-base-dev - Automatically Tuned Linear Algebra Software, generic static
 i  libattr1 - extended attribute handling - shared library
 i  libaudio-dev - Network Audio System - development files
@@ -130,6 +226,8 @@ i  libaudiofile-dev - Open-source version of SGI's audiofile library (header fil
 i  libaudit-common - Dynamic library for security auditing - common files
 i  libaudit1 - Dynamic library for security auditing
 i  libavahi-compat-libdnssd-dev - Development headers for the Avahi Apple Bonjour compatibility library
+i  libavahi-gobject0 - Avahi GObject library
+i  libavahi-ui-gtk3-0 - Avahi GTK+ User interface library for GTK3
 i  libavcodec-dev - FFmpeg library with de/encoders for audio/video codecs - development files
 i  libavformat-dev - FFmpeg library with (de)muxers for multimedia containers - development files
 i  libavresample-dev - FFmpeg compatibility library for resampling - development files
@@ -143,7 +241,9 @@ i  libc6 - GNU C Library: Shared libraries
 i  libcap-ng0 - An alternate POSIX capabilities library
 i  libcap2 - POSIX 1003.1e capabilities (library)
 i  libcap2-bin - POSIX 1003.1e capabilities (utilities)
+i  libcapture-tiny-perl - module to capture STDOUT and STDERR
 i  libclang1 - C, C++ and Objective-C compiler (LLVM based)
+i  libclone-perl - module for recursively copying Perl datatypes
 i  libcom-err2 - common error description library
 i  libcryptsetup12 - disk encryption support - shared library
 i  libcurl4 - easy-to-use client-side URL transfer library (OpenSSL flavour)
@@ -151,13 +251,19 @@ i  libdb5.3 - Berkeley v5.3 Database Libraries [runtime]
 i  libdbus-1-dev - simple interprocess messaging system (development headers)
 i  libdebconfclient0 - Debian Configuration Management System (C-implementation library)
 i  libdevmapper1.02.1 - Linux Kernel Device Mapper userspace library
+i  libdigest-bubblebabble-perl - perl module to create bubble-babble fingerprints
+i  libdiscid0 - library for creating MusicBrainz DiscIDs
 i  libdns-export1104 - Exported DNS Shared Library
+i  libdotconf0 - Configuration file parser library - runtime files
 i  libeasyloggingpp-dev - single-header logging library for C++ applications
 i  libeigen3-dev - lightweight C++ template library for linear algebra
 i  libelf-dev - libelf1 development libraries and header files
 i  libelf1 - library to read and write ELF files
+i  libemail-valid-perl - Perl module for checking the validity of Internet email addresses
+i  libespeak-ng1 - Multi-lingual software speech synthesizer: shared library
 i  libestr0 - Helper functions for handling strings (lib)
 i  libext2fs2 - ext2/ext3/ext4 file system libraries
+i  libfarstream-0.2-5 - Audio/Video communications framework: core library
 i  libfastjson4 - fast json library for C
 i  libfcitx5config-dev - Fcitx Input Method Framework v5 (config library dev files)
 i  libfcitx5core-dev - Fcitx Input Method Framework v5 (core library dev files)
@@ -166,8 +272,11 @@ i  libfdisk1 - fdisk partitioning library
 i  libffi6 - Foreign Function Interface library runtime
 i  libflac-dev - Free Lossless Audio Codec - C development library
 i  libfluidsynth-dev - Real-time MIDI software synthesizer (development files)
+i  libfreehand-0.1-1 - Library for parsing the FreeHand file format structure
+i  libfreerdp2-2 - Free Remote Desktop Protocol library (core library)
 i  libfreetype6 - FreeType 2 font engine, shared library files
 i  libfreetype6-dev - FreeType 2 font engine, development files
+i  libgadu3 - Gadu-Gadu protocol library - runtime files
 i  libgcc1 - GCC support library
 i  libgcrypt20 - LGPL Crypto library - runtime library
 i  libgdiplus - interface library for System.Drawing of Mono
@@ -178,17 +287,26 @@ i  libglew-dev - OpenGL Extension Wrangler - development environment
 i  libglfw3-dev - portable library for OpenGL, window and input (development files)
 i  libglw1-mesa-dev - GL widget library for Athena and Motif -- development files
 i  libgmp10 - Multiprecision arithmetic library
+i  libgnome-games-support-1-3 - library for common functions of GNOME games
+i  libgnome-games-support-common - library for common functions of GNOME games (common files)
 i  libgnutls30 - GNU TLS library - main runtime library
 i  libgpg-error0 - GnuPG development runtime library
+i  libgpod-common - common files for libgpod
+i  libgpod4 - library to read and write songs and artwork to an iPod
 i  libgstreamer1.0-dev - GStreamer core development files
 i  libgtk-3-0 - GTK+ graphical user interface library
 i  libgtk-3-dev - development files for the GTK+ library
+i  libgtk-vnc-2.0-0 - VNC viewer widget for GTK+3 (runtime libraries)
+i  libgucharmap-2-90-7 - Unicode browser widget library (shared library)
+i  libgvnc-1.0-0 - VNC GObject wrapper (runtime libraries)
 i  libhogweed4 - low level cryptographic library (public-key cryptos)
 i  libibus-1.0-dev - Intelligent Input Bus - development file
 i  libidn11 - GNU Libidn library, implementation of IETF IDN specifications
 i  libidn2-0 - Internationalized domain names (IDNA2008/TR46) library
+i  libio-pty-perl - Perl module for pseudo tty IO
 i  libip4tc0 - netfilter libip4tc library
 i  libip6tc0 - netfilter libip6tc library
+i  libipc-run-perl - Perl module for running processes
 i  libiptc0 - netfilter libiptc library
 i  libisc-export1100 - Exported ISC Shared Library
 i  libjack-dev - JACK Audio Connection Kit (development files)
@@ -204,15 +322,25 @@ i  liblua5.3-dev - Development files for the Lua language version 5.3
 i  liblz4-1 - Fast LZ compression algorithm library - runtime
 i  liblz4-dev - Fast LZ compression algorithm library - development files
 i  liblzma5 - XZ-format compression library
+i  libmeanwhile1 - open implementation of the Lotus Sametime Community Client protocol
+i  libminiupnpc17 - UPnP IGD client lightweight library
 i  libmnl0 - minimalistic Netlink communication library
 i  libmodplug-dev - development files for mod music based on ModPlug
 i  libmount1 - device mounting library
 i  libmpg123-dev - MPEG layer 1/2/3 audio decoder (development files)
+i  libmspub-0.1-1 - library for parsing the mspub file structure
+i  libmusicbrainz5-2 - Library to access the MusicBrainz.org database (C wrapper functions)
+i  libmusicbrainz5cc2v5 - Library to access the MusicBrainz.org database
+i  libnatpmp1 - portable and fully compliant implementation of NAT-PMP
 i  libncurses-dev - developer's libraries for ncurses
 i  libncurses5 - shared libraries for terminal handling (legacy version)
 i  libncurses5-dev - transitional package for libncurses-dev
 i  libncurses6 - shared libraries for terminal handling
 i  libncursesw6 - shared libraries for terminal handling (wide character support)
+i  libnet-dns-perl - Perform DNS queries from a Perl script
+i  libnet-dns-sec-perl - DNSSEC extension to NET::DNS
+i  libnet-domain-tld-perl - list of currently available Top-level Domains (TLDs)
+i  libnet-ip-perl - Perl extension for manipulating IPv4/IPv6 addresses
 i  libnetfilter-conntrack3 - Netfilter netlink-conntrack library
 i  libnettle6 - low level cryptographic library (symmetric and one-way cryptos)
 i  libnewt0.52 - Not Erik's Windowing Toolkit - text mode windowing with slang
@@ -225,12 +353,20 @@ i  libopengl0 - Vendor neutral GL dispatch library -- OpenGL support
 i  libopus-dev - Opus codec library development files
 i  libopusfile-dev - High-level API for basic manipulation of Ogg Opus audio streams
 i  libp11-kit0 - library for loading and coordinating access to PKCS#11 modules - runtime
+i  libpackagekit-glib2-18 - Library for accessing PackageKit using GLib
+i  libpagemaker-0.0-0 - Library for importing and converting PageMaker Documents
 i  libpam-modules - Pluggable Authentication Modules for PAM
 i  libpam-modules-bin - Pluggable Authentication Modules for PAM - helper binaries
 i  libpam-runtime - Runtime support for the PAM library
 i  libpam-systemd - system and service manager - PAM module
 i  libpam0g - Pluggable Authentication Modules library
+i  libpath-tiny-perl - file path utility
+i  libpcaudio0 - C API to different audio devices - shared library
 i  libpcre3 - Old Perl 5 Compatible Regular Expression Library - runtime files
+i  libperl4-corelibs-perl - libraries historically supplied with Perl 4
+i  libperlio-gzip-perl - module providing a PerlIO layer to gzip/gunzip
+i  libphodav-2.0-0 - WebDAV server implementation using libsoup
+i  libphodav-2.0-common - WebDAV server implementation using libsoup (common files)
 i  libpng++-dev - C++ interface to the PNG (Portable Network Graphics) library
 i  libpng-dev - PNG library - development (version 1.6)
 i  libpng16-16 - PNG library - runtime (version 1.6)
@@ -239,35 +375,56 @@ i  libprocps7 - library for accessing process information from /proc
 i  libprotobuf-dev - protocol buffers C++ library (development files) and proto files
 i  libproxy-dev - automatic proxy configuration management library (devel)
 i  libpulse-dev - PulseAudio client development headers and libraries
+i  libpurple-bin - multi-protocol instant messaging library - extra utilities
+i  libpurple0 - multi-protocol instant messaging library
 i  libpython3-all-dev - package depending on all supported Python 3 development packages
+i  libqqwing2v5 - tool for generating and solving Sudoku puzzles (library)
+i  libqxp-0.0-0 - library for reading and converting QuarkXPress files
 i  libre2-dev - efficient, principled regular expression library, development kit
+i  libreoffice-avmedia-backend-gstreamer - GStreamer backend for LibreOffice
+i  libreoffice-calc - office productivity suite -- spreadsheet
+i  libreoffice-draw - office productivity suite -- drawing
+i  libreoffice-gnome - office productivity suite -- GNOME integration
+i  libreoffice-gtk3 - office productivity suite -- GTK+ 3 integration
+i  libreoffice-impress - office productivity suite -- presentation
+i  librhythmbox-core10 - support library for the rhythmbox music player
+i  librsvg2-dev - SAX-based renderer library for SVG files (development)
 i  libsamplerate0-dev - Development files for audio sample rate conversion
 i  libseccomp2 - high level interface to Linux seccomp filter
 i  libselinux1 - SELinux runtime shared libraries
 i  libsemanage-common - Common files for SELinux policy management libraries
 i  libsemanage1 - SELinux policy management library
 i  libsepol1 - SELinux library for manipulating binary security policies
+i  libsgutils2-2 - utilities for devices using the SCSI command set (shared libraries)
 i  libslang2 - S-Lang programming library - runtime version
 i  libsmartcols1 - smart column output alignment library
 i  libsndfile1-dev - Development files for libsndfile; a library for reading/writing audio files
 i  libsndio-dev - Small audio and MIDI framework from OpenBSD, development files
 i  libsocksd0-dev - Development files for compiling programs with SOCKS support
+i  libsonic0 - Simple library to speed up or slow down speech
+i  libspeechd2 - Speech Dispatcher: Shared libraries
+i  libspice-client-glib-2.0-8 - GObject for communicating with Spice servers (runtime library)
+i  libspice-client-gtk-3.0-5 - GTK3 widget for SPICE clients (runtime library)
 i  libss2 - command-line interface parsing library
 i  libssl-dev - Secure Sockets Layer toolkit - development files
 i  libssl1.1 - Secure Sockets Layer toolkit - shared libraries
+i  libstartup-notification0-dev - library for program launch feedback (development headers)
 i  libstdc++6 - GNU Standard C++ Library v3
 i  libswscale-dev - FFmpeg library for image scaling and various conversions - development files
 i  libsystemd0 - systemd utility library
 i  libtasn1-6 - Manage ASN.1 structures (runtime)
 i  libtext-charwidth-perl - get display widths of characters on the terminal
 i  libtext-iconv-perl - converts between character sets in Perl
+i  libtext-levenshtein-perl - implementation of the Levenshtein edit distance
 i  libtext-wrapi18n-perl - internationalized substitute of Text::Wrap
 i  libtiff-dev - Tag Image File Format library (TIFF), development files
 i  libtinfo6 - shared low-level terminfo library for terminal handling
 i  libtool - Generic library support script
 i  libudev-dev - libudev development files
 i  libudev1 - libudev shared library
+i  libunicode-utf8-perl - encoding and decoding of UTF-8 encoding form
 i  libunistring2 - Unicode string library for C
+i  libusbredirhost1 - Implementing the usb-host (*) side of a usbredir connection (runtime)
 i  libuuid1 - Universally Unique ID library
 i  libvpx-dev - VP8 and VP9 video codec (development files)
 i  libvtk6-dev - VTK header files
@@ -275,15 +432,58 @@ i  libvulkan-dev - Vulkan loader library -- development files
 i  libvulkan1 - Vulkan loader library
 i  libwayland-dev - wayland compositor infrastructure - development files
 i  libwebp-dev - Lossy compression of digital photographic images.
+i  libwinpr2-2 - Windows Portable Runtime library
 i  libx11-dev - X11 client-side library (development headers)
+i  libxcb-composite0-dev - X C Binding, composite extension, development files
+i  libxcb-cursor-dev - utility libraries for X C Binding -- cursor, development files
+i  libxcb-damage0-dev - X C Binding, damage extension, development files
+i  libxcb-dpms0-dev - X C Binding, dpms extension, development files
+i  libxcb-dri2-0-dev - X C Binding, dri2 extension, development files
+i  libxcb-dri3-dev - X C Binding, dri3 extension, development files
+i  libxcb-ewmh-dev - utility libraries for X C Binding -- ewmh, development files
+i  libxcb-glx0-dev - X C Binding, glx extension, development files
+i  libxcb-icccm4-dev - utility libraries for X C Binding -- icccm, development files
+i  libxcb-image0-dev - utility libraries for X C Binding -- image, development files
+i  libxcb-imdkit-dev - XIM protocol implementation in XCB (development files)
+i  libxcb-keysyms1-dev - utility libraries for X C Binding -- keysyms, development files
+i  libxcb-present-dev - X C Binding, present extension, development files
+i  libxcb-randr0-dev - X C Binding, randr extension, development files
+i  libxcb-record0-dev - X C Binding, record extension, development files
+i  libxcb-render-util0-dev - utility libraries for X C Binding -- render-util
+i  libxcb-render0-dev - X C Binding, render extension, development files
+i  libxcb-res0-dev - X C Binding, res extension, development files
+i  libxcb-screensaver0-dev - X C Binding, screensaver extension, development files
+i  libxcb-shape0-dev - X C Binding, shape extension, development files
+i  libxcb-shm0-dev - X C Binding, shm extension, development files
+i  libxcb-sync-dev - X C Binding, sync extension, development files
+i  libxcb-util0-dev - utility libraries for X C Binding -- atom, aux and event
+i  libxcb-xf86dri0-dev - X C Binding, xf86dri extension, development files
+i  libxcb-xfixes0-dev - X C Binding, xfixes extension, development files
+i  libxcb-xinerama0-dev - X C Binding, xinerama extension, development files
+i  libxcb-xinput-dev - X C Binding, xinput extension, development files
+i  libxcb-xkb-dev - X C Binding, XKEYBOARD extension, development files
+i  libxcb-xrm-dev - utility functions for the X resource manager, development files
+i  libxcb-xtest0-dev - X C Binding, xtest extension, development files
+i  libxcb-xv0-dev - X C Binding, xv extension, development files
+i  libxcb-xvmc0-dev - X C Binding, xvmc extension, development files
+i  libxcb1-dev - X C Binding, development files
 i  libxext-dev - X11 miscellaneous extensions library (development headers)
+i  libxkbcommon-dev - library interface to the XKB compiler - development files
+i  libxkbcommon-x11-dev - library to create keymaps with the XKB X11 protocol - development files
 i  libxslt1-dev - XSLT 1.0 processing library - development kit
 i  libxtables12 - netfilter xtables library
 i  libxtst-dev - X11 Record extension library (development headers)
+i  libyaml-libyaml-perl - Perl interface to libyaml, a YAML implementation
+i  libzeitgeist-2.0-0 - library to access Zeitgeist - shared library
+i  libzephyr4 - Project Athena's notification service - non-Kerberos libraries
+i  libzmf-0.0-0 - Zoner Draw/Zebra file reading/converting library
 i  libzstd1 - fast lossless compression algorithm
 i  lightdm - simple display manager
 i  lightdm-gtk-greeter - simple display manager (GTK+ greeter)
 i  lightdm-gtk-greeter-settings - settings editor for the LightDM GTK+ Greeter
+i  lightning - Calendar Extension for Thunderbird
+i  lightsoff - Light puzzle game
+i  lintian - Debian package checker
 i  linux-headers-4.19.0-6-all - All header files for Linux 4.19 (meta-package)
 i  linux-headers-amd64 - Header files for Linux amd64 configuration (meta-package)
 i  linux-image-amd64 - Linux for 64-bit PCs (meta-package)
@@ -292,23 +492,29 @@ i  locate - maintain and query an index of a directory tree
 i  login - system login tools
 i  logrotate - Log rotation utility
 i  love - 2D game development framework based on Lua and OpenGL
+i  lp-solve - Solve (mixed integer) linear programming problems
 i  lsb-base - Linux Standard Base init script functionality
 i  lshw - information about hardware configuration
 i  lsof - utility to list open files
 i  lua5.3 - Simple, extensible, embeddable programming language
 i  man-db - on-line manual pager
 i  manpages - Manual pages about using a GNU/Linux system
+i  mate-themes - Official themes for the MATE desktop
 i  mawk - a pattern scanning and text processing language
+i  meld - graphical tool to diff and merge files
 i  mercurial - easy-to-use, scalable distributed version control system
 i  mesa-vulkan-drivers - Mesa Vulkan graphics drivers
 i  midori - fast, lightweight graphical web browser
 i  minizip - compression library - minizip tools
 i  monodevelop - Development Environment for GNOME
 i  mount - tools for mounting and manipulating filesystems
+i  murrine-themes - themes for gtk2 murrine engine
 i  nano - small, friendly text editor inspired by Pico
+i  nasm - General-purpose x86 assembler
 i  ncurses-base - basic terminal type definitions
 i  ncurses-bin - terminal-related programs and man pages
 i  ncurses-term - additional terminal type definitions
+i  nemo - File manager and graphical shell for Cinnamon
 i  neofetch - Shows Linux System Information with Distribution Logo
 i  neovim - heavily refactored vim fork
 i  net-tools - NET-3 networking toolkit
@@ -316,31 +522,52 @@ i  netbase - Basic TCP/IP networking system
 i  netcat-traditional - TCP/IP swiss army knife
 i  nethogs - Net top tool grouping bandwidth per process
 i  nmap - The Network Mapper
+i  nmon - performance monitoring tool for Linux
 i  nuget - Package manager for NuGet repos - executable
 i  nvidia-legacy-340xx-driver - NVIDIA metapackage (340xx legacy version)
 i  ocs-url - OCS-URL
 i  octave - GNU Octave language for numerical computations
 i  openssh-client - secure shell (SSH) client, for secure access to remote machines
+i  orca - Scriptable screen reader
+i  packagekit - Provides a package management service
+i  packagekit-tools - Provides PackageKit command-line tools
 i  passwd - change and administer password and group data
+i  patchutils - Utilities to work with patches
 i  pciutils - Linux PCI Utilities
 i  pdftk - transitional package for pdftk, a tool for manipulating PDF documents
 i  perl - Larry Wall's Practical Extraction and Report Language
 i  perl-base - minimal Perl system
 i  perl-modules-5.28 - Core Perl modules
+i  pidgin - graphical multi-protocol instant messaging client
+i  pidgin-data - multi-protocol instant messaging client - data files
 i  popularity-contest - Vote for your favourite packages automatically
 i  powerline - prompt and statusline utility
 i  procps - /proc file system utilities
+i  psensor - display graphs for monitoring hardware temperature
 i  python - interactive high-level object-oriented language (Python2 version)
 i  python-minimal - minimal subset of the Python2 language
 i  python2.7 - Interactive high-level object-oriented language (version 2.7)
+i  python3-brlapi - Braille display access via BRLTTY - Python3 bindings
+i  python3-gst-1.0 - GStreamer GObject Introspection overrides for Python (Python 3)
+i  python3-louis - Python bindings for liblouis
+i  python3-mako - fast and lightweight templating for the Python 3 platform
+i  python3-pyatspi - Assistive Technology Service Provider Interface - Python3 bindings
 i  python3-reportbug - Python modules for interacting with bug tracking systems
+i  python3-speechd - Python interface to Speech Dispatcher
 i  qemu - fast processor emulator, dummy package
+i  qemu-kvm - QEMU Full virtualization on x86 hardware
+i  qemu-system-x86 - QEMU full system emulation binaries (x86)
+i  quadrapassel - popular Russian game, similar to Tetris
 i  quiterss - RSS/Atom news feeds reader
 i  r-base - GNU R statistical computation and graphics system
 i  readline-common - GNU readline and history libraries, common files
 i  redshift - Adjusts the color temperature of your screen
 i  remind - sophisticated calendar and alarm program
 i  reportbug - reports bugs in the Debian distribution
+i  rhythmbox - music player and organizer for GNOME
+i  rhythmbox-data - data files for rhythmbox
+i  rhythmbox-plugin-cdrecorder - burning plugin for rhythmbox music player
+i  rhythmbox-plugins - plugins for rhythmbox music player
 i  rsync - fast, versatile, remote (and local) file-copying tool
 i  rsyslog - reliable system and kernel logging daemon
 i  sagemath - Open Source Mathematical Software
@@ -353,19 +580,33 @@ i  sed - GNU stream editor for filtering/transforming text
 i  sensible-utils - Utilities for sensible alternative selection
 i  shellcheck - lint tool for shell scripts
 i  shim-signed - Secure Boot chain-loading bootloader (Microsoft-signed binary)
+i  shotwell - digital photo organizer
+i  shotwell-common - digital photo organizer - common files
+i  simple-scan - Simple Scanning Utility
 i  slick-greeter - Slick-looking LightDM greeter
+i  sloccount - programs for counting physical source lines of code (SLOC)
+i  sound-icons - Sounds for speech enabled applications
+i  sound-juicer - GNOME CD Ripper
+i  speech-dispatcher - Common interface to speech synthesizers
+i  speech-dispatcher-audio-plugins - Speech Dispatcher: Audio output plugins
+i  speech-dispatcher-espeak-ng - Speech Dispatcher: Espeak-ng output module
+i  spice-client-glib-usb-acl-helper - Helper tool to validate usb ACLs
 i  subversion - Advanced version control system
+i  suckless-tools - simple commands for minimalistic window managers
+i  swell-foop - Colored ball puzzle game
+i  system-config-printer - graphical interface to configure the printing system
 i  systemd - system and service manager
 i  systemd-sysv - system and service manager - SysV links
 i  sysvinit-utils - System-V-like utilities
+i  tali - sort of poker with dice and less money
 i  tar - GNU version of the tar archiving utility
 i  task-british-desktop - British English desktop
-i  task-cinnamon-desktop - Cinnamon
 i  task-desktop - Debian desktop environment
 i  task-english - General English environment
 i  task-ssh-server - SSH server
 i  tasksel - tool for selecting tasks for installation on Debian systems
 i  tasksel-data - official tasks used for installation of Debian systems
+i  tcl - Tool Command Language (default version) - shell
 i  telnet - basic telnet client
 i  terminator - multiple GNOME terminals in one window
 i  texlive-base - TeX Live: Essential programs and files
@@ -428,10 +669,13 @@ i  texlive-publishers-doc - TeX Live: Documentation files for texlive-publishers
 i  texlive-science - TeX Live: Mathematics, natural sciences, computer science packages
 i  texlive-science-doc - TeX Live: Documentation files for texlive-science
 i  texlive-xetex - TeX Live: XeTeX and packages
+i  thunderbird - mail/news client with RSS, chat and integrated spam filter support
 i  tightvncserver - virtual network computing server software
 i  tiled - general purpose tile map editor
 i  tmux - terminal multiplexer
 i  traceroute - Traces the route taken by packets over an IPv4/IPv6 network
+i  transmission-common - lightweight BitTorrent client (common files)
+i  transmission-gtk - lightweight BitTorrent client (GTK+ interface)
 i  tzdata - time zone and daylight-saving time data
 i  ucf - Update Configuration File(s): preserve user changes to config files
 i  udev - /dev/ and hotplug management daemon
@@ -440,13 +684,21 @@ i  util-linux - miscellaneous system utilities
 i  vim - Vi IMproved - enhanced vi editor
 i  vim-common - Vi IMproved - Common files
 i  vim-tiny - Vi IMproved - enhanced vi editor - compact version
+i  vinagre - remote desktop client for the GNOME Desktop
+i  vino - VNC server for GNOME
+i  vlc - multimedia player and streamer
 i  vtk7 - Binaries for VTK7
 i  vulkan-utils - transitional package
 i  wamerican - American English dictionary words for /usr/share/dict
 i  wget - retrieves files from the web
 i  whiptail - Displays user-friendly dialog boxes from shell scripts
 i  wireshark - network traffic analyzer - meta-package
+i  xbindkeys - Associate a combination of keys or mouse buttons with a shell command
+i  xbindkeys-config - an easy to use gtk program for configuring Xbindkeys
+i  xbrlapi - Access software for a blind person using a braille display - xbrlapi
+i  xcb - Pigeon holes for your cut and paste selections
 i  xclip - command line interface to X selections
+i  xdg-user-dirs-gtk - tool to manage well known user directories (Gtk extension)
 i  xfonts-100dpi - 100 dpi fonts for X
 i  xfonts-100dpi-transcoded - 100 dpi fonts for X (transcoded from ISO 10646-1)
 i  xfonts-75dpi - 75 dpi fonts for X
@@ -526,5 +778,6 @@ i  xsltproc - XSLT 1.0 command line processor
 i  xterm - X terminal emulator
 i  xxd - tool to make (or reverse) a hex dump
 i  yarn - Fast, reliable, and secure dependency management.
+i  yasm - modular assembler with multiple syntaxes support
 i  zlib1g - compression library - runtime
 i  zsh - shell with lots of features
