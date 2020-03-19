@@ -3,8 +3,8 @@
 #|  _|  \  /|  _|| |
 #| |___ /  \| |__| |___
 #|_____/_/\_\_____\____|
-exec --no-startup-id feh --randomize --bg-fill $HOME/Pictures/_wallpaper/*
 exec --no-startup-id dunst &
+exec --no-startup-id feh --randomize --bg-fill $HOME/Pictures/_wallpaper/*
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # ____    _    ____
@@ -35,7 +35,7 @@ exec --no-startup-id dunst &
 bar {
 	font pango:mono 10
 	status_command i3blocks
-	position top
+	position bottom
 	mode dock
 	modifier None
 }
@@ -159,9 +159,9 @@ bindsym $mod+Mod1+Down  resize grow   height 2 px or 2 ppt
 bindsym $mod+Mod1+Up    resize shrink height 2 px or 2 ppt
 bindsym $mod+Mod1+Right resize grow   width  2 px or 2 ppt
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +1% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -1% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ >/dev/null 2>/dev/null && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- >/dev/null 2>/dev/null && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle && pkill -RTMIN+10 i3blocks
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
