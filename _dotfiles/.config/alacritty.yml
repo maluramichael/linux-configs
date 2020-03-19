@@ -181,7 +181,7 @@ draw_bold_text_with_bright_colors: true
 schemes:
   monokai_pro: &dark
     primary:
-      background: "0x2D2A2E"
+      background: "0x333333"
       foreground: "0xFCFCFA"
     normal:
       black: "0x403E41"

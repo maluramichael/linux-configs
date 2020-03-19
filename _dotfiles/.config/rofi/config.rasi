@@ -1,12 +1,11 @@
 configuration {
-	modi: "window,run,ssh,drun,windowcd,combi,keys";
+	modi: "combi,drun,windowcd,window,run,ssh,keys";
 	width: 50;
 	lines: 20;
 	columns: 1;
-/*	font: "mono 12";*/
-/*	bw: 1;*/
+	font: "mono 12";
 	location: 0;
-	padding: 10;
+	padding: 0;
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
@@ -23,57 +22,57 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
 /*	sort: false;*/
 /*	sorting-method: ;*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
-	sidebar-mode: false;
+	sidebar-mode: true;
 /*	eh: 1;*/
 /*	auto-select: false;*/
 	parse-hosts: false;
 /*	parse-known-hosts: true;*/
-/*	combi-modi: "window,run";*/
+	combi-modi: "window,drun,windowcd,ssh,keys,run";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
-	line-margin: 1;
-	line-padding: 1;
+	line-margin: 0;
+	line-padding: 0;
 /*	filter: ;*/
 /*	separator-style: "dash";*/
 	hide-scrollbar: true;
-/*	fullscreen: false;*/
+	fullscreen: false;
 /*	fake-transparency: false;*/
 /*	dpi: -1;*/
 /*	threads: 0;*/
-/*	scrollbar-width: 8;*/
+	scrollbar-width: 0;
 /*	scroll-method: 0;*/
 /*	fake-background: "screenshot";*/
-/*	window-format: "{w}    {c}   {t}";*/
+	window-format: "[{w}] {c} {t}";
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "Paper";
+	theme: "malura";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
 /*	color-window: ;*/
 /*	max-history-size: 25;*/
-/*	combi-hide-mode-prefix: false;*/
+	combi-hide-mode-prefix: true;
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-/*	display-window: ;*/
-/*	display-windowcd: ;*/
-/*	display-run: ;*/
-/*	display-ssh: ;*/
-/*	display-drun: ;*/
-/*	display-combi: ;*/
-/*	display-keys: ;*/
+	display-window: "Window";
+	display-windowcd: "Switch";
+	display-run: "Run";
+	display-ssh: "SSH";
+	display-drun: "Applications";
+	display-combi: "ALL";
+	display-keys: "Keys";
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
 /*	kb-clear-line: "Control+w";*/
