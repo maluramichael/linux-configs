@@ -249,7 +249,7 @@ schemes:
       cyan: "0x4fb8cc"
       white: "0xf1f1f1"
 
-colors: *light
+colors: *dark
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once

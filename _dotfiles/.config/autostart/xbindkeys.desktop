@@ -1,0 +1,10 @@
+[Desktop Entry]
+Terminal=false
+Name=xbindkeys
+Exec=xbindkeys
+Type=Application
+Categories=System;Utils;
+X-GNOME-Autostart-enabled=true
+NoDisplay=true
+Hidden=true
+X-GNOME-Autostart-Delay=0

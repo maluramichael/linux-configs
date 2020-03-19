@@ -10,4 +10,9 @@ fi
 
 cd "$TOOLS_HOME/alacritty" || return
 git pull
-make binary
+cargo build --release
+
+sudo cp target/release/alacritty "$HOME/.local/bin"
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
