@@ -11,6 +11,6 @@ fi
 cd "$LIBS_HOME/freetype" || return
 git pull
 ./autogen.sh
-./configure --prefix "$INSTALL_PREFIX"
+./configure --prefix="$INSTALL_PREFIX"
 make
 make install

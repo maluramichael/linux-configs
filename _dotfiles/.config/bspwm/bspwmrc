@@ -1,0 +1,38 @@
+#! /bin/bash
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
+bspc config top_padding 30
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+bspc config border_width 3
+bspc config window_gap 10
+
+# Borders and gaps
+bspc config borderless_monocle true
+bspc config gapless_monocle false
+
+# Border colors
+bspc config normal_border_color "#484848"
+bspc config focused_border_color "#1F8999"
+bspc config urgent_border_color "#B58900"
+bspc config presel_border_color "#26E2FF"
+
+# Focusing behavior
+bspc config focus_follows_pointer false
+bspc config history_aware_focus false
+bspc config focus_by_distance true
+
+# Misc
+bspc config split_ratio 0.50
+bspc config auto_alternate true
+bspc config auto_cancel true
+#bspc config initial_polarity first_child
+
+bspc config split_ratio 0.5
+
+[[ ! $(pidof -x sxhkd) ]] && sxhkd &
+[[ ! $(pidof -x compton) ]] && compton &
+[[ ! $(pidof -x polybar) ]] && polybar top &
+nitrogen --set-zoom --random &

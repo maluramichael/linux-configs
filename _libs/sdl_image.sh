@@ -10,6 +10,6 @@ fi
 
 cd "$LIBS_HOME/SDL_image" || return
 hg pull && hg update
-./configure --prefix "$INSTALL_PREFIX"
+./configure --prefix="$INSTALL_PREFIX"
 make
 make install
