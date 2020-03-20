@@ -1,0 +1,15 @@
+#!/bin/sh
+
+notify-send Button $BLOCK_BUTTON
+
+# case $BLOCK_BUTTON in
+#     1) xterm -e less -S "$HOME/.local/share/weatherreport" ;;
+#     2) getforecast && showweather ;;
+#     3) pgrep -x dunst >/dev/null && notify-send "🌈 Weather module" "\- Left click for full forecast.
+# - Middle click to update forecast.
+# ☔: Chance of rain/snow
+# ❄: Daily low
+# 🌞: Daily high" ;;
+# esac
+
+echo "TEst"

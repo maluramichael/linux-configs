@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 CORES=$(nproc)
+export TERMINAL=xterm
 
 # language settings
 export LANG=en_GB.UTF-8

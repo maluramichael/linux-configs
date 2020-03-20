@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DISPLAY=${DISPLAY:-:1}
+feh --randomize --bg-fill "$HOME/Pictures/_wallpaper/"
