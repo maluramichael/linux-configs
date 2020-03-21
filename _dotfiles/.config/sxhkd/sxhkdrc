@@ -4,7 +4,6 @@
 | |_| | |_| | \__ \
  \__,_|\__|_|_|___/
 
-
 # terminal emulator
 super + Return
 	alacritty
@@ -28,7 +27,6 @@ ctrl + Print
 | '__/ _ \ |/ _ \ / _` |/ _` |
 | | |  __/ | (_) | (_| | (_| |
 |_|  \___|_|\___/ \__,_|\__,_|
-
 
 super + ctrl + F1
 	bspc wm -r && notify-send "bspwm" "bspwm reloaded"
@@ -61,7 +59,6 @@ super + {_,shift + }w
 | | | | | |  __/ (_| | | (_| |
 |_| |_| |_|\___|\__,_|_|\__,_|
 
-
 XF86AudioRaiseVolume
   exec amixer sset Master 5%+ >/dev/null 2>/dev/null
 XF86AudioLowerVolume
@@ -88,7 +85,6 @@ XF86AudioPrev
 / __| __/ _` | __/ _ \
 \__ \ || (_| | ||  __/
 |___/\__\__,_|\__\___|
-
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -166,7 +162,6 @@ super + r
 / __| |_  / _ \
 \__ \ |/ /  __/
 |___/_/___\___|
-
 
 # expand a window by moving one of its side outward
 super + shift + {Left,Down,Up,Right}
