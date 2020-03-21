@@ -1,0 +1,19 @@
+#!/bin/bash
+
+d=$(date +%Y-%m-%d-%H-%M-%S)
+path="$HOME/Pictures/_screenshots"
+img="$path/${d}.png"
+
+while getopts ":c" opt; do
+  case ${opt} in
+  c)
+    SAVE_CLIPBOARD=1
+    ;;
+  \?)
+    echo "Usage: screenshot [-c]"
+    ;;
+  esac
+done
+
+scrot "$img" && notify-send "Screenshot" "$img"
+[[ $SAVE_CLIPBOARD ]] && xclip -selection clipboard -t image/png -i "$img" && notify-send "Screenshot" "$img saved to clipboard"
