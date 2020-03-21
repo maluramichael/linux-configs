@@ -1,0 +1,15 @@
+#!/bin/bash
+
+d=$(date +%Y-%m-%d-%H-%M-%S)
+path="$HOME/Videos/_screencasts"
+mkdir -p "$path"
+out="$path/${d}.mkv"
+
+dimensions=$(xdpyinfo | awk '/dimensions/{print $2}')
+ffmpeg -framerate 60 \
+  -f x11grab \
+  -s "$dimensions" \
+  -i "$DISPLAY" \
+  -f alsa -i default \
+  -c:v libx264 -r 60 -c:a flac \
+  "$out"

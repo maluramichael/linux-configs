@@ -32,4 +32,4 @@ export MAKEFLAGS="-j$CORES"
 export INSTALL_PREFIX="$HOME/.local"
 
 # set path variable
-export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$CARGO_HOME/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$CARGO_HOME/bin:$PATH"

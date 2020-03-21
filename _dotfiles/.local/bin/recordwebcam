@@ -1,0 +1,8 @@
+#!/bin/bash
+
+d=$(date +%Y-%m-%d-%H-%M-%S)
+path="$HOME/Videos/_screencasts"
+mkdir -p "$path"
+out="$path/webcam_${d}.mkv"
+
+ffmpeg -i "$DISPLAY" /dev/video0 "$out"
