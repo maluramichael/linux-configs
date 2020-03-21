@@ -23,7 +23,7 @@ background-alt = #77000000
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
-primary = #ffb52a
+primary = #cd143c
 secondary = #e60053
 alert = #bd2c40
 
@@ -79,7 +79,7 @@ override-redirect = true
 ;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-scroll = pointer
 
 [module/xwindow]
 type = internal/xwindow
@@ -107,7 +107,7 @@ interval = 25
 
 mount-0 = /
 
-format-underline = #ffffff
+format-underline = #dc143c
 
 label-mounted = %{F#ffffff}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
@@ -116,15 +116,15 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-padding = 2
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -133,7 +133,7 @@ label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
 ;Separator in between workspaces
-label-separator = |
+;label-separator =
 
 ;[module/i3]
 ;type = internal/i3
@@ -213,7 +213,7 @@ type = internal/cpu
 interval = 2
 ;format-prefix = "CPU "
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ffffff
+format-underline = #dc143c
 label = %percentage:2%%
 
 [module/memory]
@@ -221,7 +221,7 @@ type = internal/memory
 interval = 20
 ;format-prefix = "MEM "
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ffffff
+format-underline = #dc143c
 label = %percentage_used%%
 
 [module/wlan]
@@ -230,7 +230,7 @@ interface = net1
 interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #ffffff
+format-connected-underline = #dc143c
 label-connected = %essid%
 
 ;format-disconnected =
@@ -251,7 +251,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #ffffff
+format-connected-underline = #dc143c
 format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -274,14 +274,14 @@ time-alt = %H:%M:%S
 
 ;format-prefix = Date
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ffffff
+format-underline = #dc143c
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-underline = #ffffff
+format-underline = #dc143c
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
@@ -308,7 +308,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/alsa]
 type = internal/alsa
-format-underline = #ffffff
+format-underline = #dc143c
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 
@@ -373,7 +373,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 ;warn-temperature = 60
 ;
 ;format = <ramp> <label>
-;format-underline = #ffffff
+;format-underline = #dc143c
 ;format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
 ;
