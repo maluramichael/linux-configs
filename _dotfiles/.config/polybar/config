@@ -1,29 +1,9 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [colors]
-;background = ${xrdb:color0:#222}
 background = #77000000
 background-alt = #77000000
-;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
 foreground-alt = #ffffff
-primary = #cd143c
+primary = #dc143c
 secondary = #e60053
 alert = #bd2c40
 
@@ -36,103 +16,87 @@ offset-y = 5px
 radius = 0.0
 fixed-center = false
 enable-ipc=true
-
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-line-size = 0
+line-size = 3
 line-color = #f00
-
 border-size = 0
 border-color = #333333
-
 padding-left = 0
 padding-right = 2
-
 module-margin-left = 1
 module-margin-right = 2
-
-font-0 = fixed:pixelsize=14;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=14;0
+font-0 = unifont:fontformat=truetype:size=10:antialias=true;3
+font-1 = fixed:pixelsize=14;1
+font-2 = siji:pixelsize=14;3
 font-3 = FontAwesome5FreeRegular:size=14;0
 font-4 = FontAwesome5FreeSolid:style=Solid:size=14;0
 font-5 = FontAwesome5BrandsRegular:size=14;0
-
 modules-left = bspwm
-modules-center = mpd
-;modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 modules-right =  filesystem alsa cpu memory eth date powermenu
-
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
 wm-restack = bspwm
-;wm-restack = i3
-
 override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
 cursor-click = pointer
 cursor-scroll = pointer
 
+
+; #############################################################################################
+[module/isrunning-compton]
+type = custom/script
+exec = $HOME/.local/bin/polybar-scripts/iscomptonrunning
+interval = 5
+click-left = $HOME/.local/bin/polybar-scripts/iscomptonrunning --toggle &
+
+; #############################################################################################
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
 
+; #############################################################################################
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
 ;format-prefix = "X "
 ;format-prefix-foreground = ${colors.foreground-alt}
-;format-prefix-underline = ${colors.secondary}
-
+format-prefix-underline = ${colors.primary}
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
-
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+; #############################################################################################
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
-
-format-underline = #dc143c
-
+format-mounted-underline = ${colors.primary}
 label-mounted =  %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
+; #############################################################################################
 [module/bspwm]
 type = internal/bspwm
-
-label-focused = %name%
-label-focused-background = ${colors.primary}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %name%
-label-occupied-padding = 2
-
-label-urgent = %name%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
+label-focused = %index%
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.primary}
+label-focused-padding = 1
+label-occupied = %index%
+label-occupied-background = ${colors.background}
+label-occupied-padding = 1
+label-occupied-underline = #ffffff
+label-urgent = %index%!
+label-urgent-foreground = ${colors.primary}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 1
 label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-underline = #666666
+label-empty-padding = 1
 
+; #############################################################################################
 [module/mpd]
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
@@ -146,6 +110,7 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
+; #############################################################################################
 [module/xbacklight]
 type = internal/xbacklight
 
@@ -163,34 +128,38 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
+; #############################################################################################
 [module/backlight-acpi]
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
+; #############################################################################################
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = ""
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #dc143c
+format-underline = ${colors.primary}
 label = %percentage:2%%
 
+; #############################################################################################
 [module/memory]
 type = internal/memory
 interval = 20
 format-prefix = ""
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #dc143c
+format-underline = ${colors.primary}
 label = %percentage_used%%
 
+; #############################################################################################
 [module/wlan]
 type = internal/network
 interface = net1
 interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #dc143c
+format-connected-underline = ${colors.primary}
 label-connected = %essid%
 
 ;format-disconnected =
@@ -206,15 +175,16 @@ label-connected = %essid%
 ;ramp-signal-4 = 4
 ramp-signal-foreground = ${colors.foreground-alt}
 
+; #############################################################################################
 [module/eth]
 type = internal/network
 interface = enp0s31f6
 interval = 3.0
 
-format-connected-underline = #dc143c
+format-connected-underline = ${colors.primary}
 format-connected-prefix = 
 format-connected-prefix-foreground = ${colors.foreground-alt}
-;label-connected = %local_ip%
+label-connected = %local_ip%
 
 format-disconnected = 
 ;format-disconnected = <label-disconnected>
@@ -222,6 +192,7 @@ format-disconnected = 
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+; #############################################################################################
 [module/date]
 type = internal/date
 interval = 5
@@ -234,18 +205,20 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #dc143c
+format-underline = ${colors.primary}
 
 label = %date% %time%
 
+; #############################################################################################
 [module/alsa]
 type = internal/alsa
-format-underline = #dc143c
+format-volume-underline = ${colors.primary}
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 
 label-volume-foreground = ${root.foreground}
 
+format-muted-underline = ${colors.primary}
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = 
 
@@ -266,97 +239,28 @@ bar-volume-empty = 
 bar-volume-empty-font = 1
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-;[module/battery]
-;type = internal/battery
-;battery = BAT0
-;adapter = ADP1
-;full-at = 98
-;
-;format-charging = <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
-;
-;format-discharging = <animation-discharging> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
-;
-;format-full-prefix = "Full "
-;format-full-prefix-foreground = ${colors.foreground-alt}
-;format-full-underline = ${self.format-charging-underline}
-;
-;ramp-capacity-0 = 
-;ramp-capacity-1 = 
-;ramp-capacity-2 = 
-;ramp-capacity-foreground = ${colors.foreground-alt}
-;
-;animation-charging-0 = 
-;animation-charging-1 = 
-;animation-charging-2 = 
-;animation-charging-foreground = ${colors.foreground-alt}
-;animation-charging-framerate = 750
-;
-;animation-discharging-0 = 
-;animation-discharging-1 = 
-;animation-discharging-2 = 
-;animation-discharging-foreground = ${colors.foreground-alt}
-;animation-discharging-framerate = 750
-
-;[module/temperature]
-;type = internal/temperature
-;thermal-zone = 0
-;warn-temperature = 60
-;
-;format = <ramp> <label>
-;format-underline = #dc143c
-;format-warn = <ramp> <label-warn>
-;format-warn-underline = ${self.format-underline}
-;
-;label = %temperature-c%
-;label-warn = %temperature-c%
-;label-warn-foreground = ${colors.secondary}
-
-;ramp-0 = 0
-;ramp-1 = 1
-;ramp-2 = 2
-;ramp-foreground = ${colors.foreground-alt}
-
+; #############################################################################################
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
-
 format-spacing = 1
 
-label-open = 
-;label-open-foreground = ${colors.secondary}
-label-close = 
-;label-close-foreground = ${colors.secondary}
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
+format-underline = ${colors.primary}
 
 menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
+menu-0-0-exec = systemctl reboot
 menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-0-1-exec = systemctl poweroff
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-; vim:ft=dosini

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cur=$(bspc config border_width)
+new=$(("$cur" + $1))
+
+if [[ $new -le 0 ]]; then
+  new=0
+fi
+
+if [[ $new -ge 10 ]]; then
+  new=10
+fi
+
+bspc config border_width $new

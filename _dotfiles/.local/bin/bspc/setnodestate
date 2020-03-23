@@ -1,0 +1,4 @@
+#!/bin/bash
+
+state=${1:-tiled}
+bspc node -t "$state"

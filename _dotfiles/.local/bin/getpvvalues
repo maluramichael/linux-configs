@@ -1,0 +1,50 @@
+#!/bin/bash
+
+SESSION=""
+GROUP="istl"
+PASS="1"
+PORTAL="https://192.168.178.48"
+
+login_session() {
+  result=$(curl -s -k -X POST -H "Content-Type: application/json" -d "{\"right\": \"$GROUP\", \"pass\": \"$PASS\"}" "$PORTAL/dyn/login.json")
+  echo $result
+  if [[ $result == *"sid"* ]]; then
+    SESSION=$(echo "$result" | jq -r ".result.sid")
+    echo $SESSION
+    return 0
+  elif [[ $result == *"err"* ]]; then
+    echo "$result" | jq -r ".err"
+    return 1
+  else
+    return 1
+  fi
+  return 0
+}
+
+get_values() {
+  path="dyn/getValues.json?sid=${SESSION}"
+
+  payload="{\"destDev\":[],\"keys\":[\"6100_40263F00\"]}"
+
+  result=$(curl -s -k -X POST -H "Content-Type: application/json" -d "$payload" "$PORTAL/$path")
+
+  devices=$(echo "$result" | jq ".result | keys[]")
+  echo $devices
+  echo $result >values.json
+}
+
+check_session() {
+  path="dyn/sessionCheck.json?sid=${SESSION}"
+  result=$(curl -s -k -X POST -H "Content-Type: application/json" -d "{}" "$PORTAL/$path")
+
+  echo $result
+}
+
+if [[ -f $HOME/.smasession ]]; then
+  SESSION=$(cat "$HOME/.smasession")
+  check_session
+else
+  login_session && echo "$SESSION" >"$HOME/.smasession"
+fi
+
+get_values

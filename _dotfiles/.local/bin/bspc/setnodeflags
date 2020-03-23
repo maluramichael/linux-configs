@@ -1,0 +1,4 @@
+#!/bin/bash
+
+flag=${1:-marked}
+bspc node -g "$flag"

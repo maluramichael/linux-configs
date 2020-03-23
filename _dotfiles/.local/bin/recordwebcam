@@ -1,8 +1,10 @@
 #!/bin/bash
 
 d=$(date +%Y-%m-%d-%H-%M-%S)
-path="$HOME/Videos/_screencasts"
+path="$HOME/Videos/_webcam"
 mkdir -p "$path"
-out="$path/webcam_${d}.mkv"
+out="$path/webcam_${d}.avi"
 
-ffmpeg -i "$DISPLAY" /dev/video0 "$out"
+ffmpeg -f alsa -r 16000 -i plughw:CARD=IM,DEV=0 \
+  -f video4linux2 -i /dev/video0 \
+  -r 30 -f avi -vcodec mpeg4 -vtag xvid -acodec libmp3lame -ab 96k "$out"

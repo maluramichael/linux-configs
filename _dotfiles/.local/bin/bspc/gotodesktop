@@ -1,0 +1,4 @@
+#!/bin/bash
+
+desktop=${1:-1}
+bspc desktop -f "$desktop"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+geometry=$(xdotool getwindowfocus getwindowgeometry)
+size=$(echo $geometry | sed 's/Geometry: .+/\1/')
+
+notify-send "$geometry"
+notify-send "$size"

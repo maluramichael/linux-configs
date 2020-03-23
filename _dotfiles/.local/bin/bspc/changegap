@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cur=$(bspc config window_gap)
+new=$(("$cur" + $1))
+
+if [[ $new -le 0 ]]; then
+  new=0
+fi
+if [[ $new -ge 50 ]]; then
+  new=50
+fi
+
+bspc config window_gap $new
