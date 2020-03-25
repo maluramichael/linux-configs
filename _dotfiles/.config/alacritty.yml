@@ -34,7 +34,7 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 0
+    x: 10
     y: 0
 
   # Spread additional padding evenly around the terminal content.
@@ -249,7 +249,7 @@ schemes:
       cyan: "0x4fb8cc"
       white: "0xf1f1f1"
 
-colors: *dark
+colors: *solarized
 # Visual Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once

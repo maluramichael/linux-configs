@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 export PATH="$HOME/.local/bin:$PATH"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 echo "$(uname -a) $(uptime -p)"
 df -hT -xtmpfs -xvfat -xdevtmpfs

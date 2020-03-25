@@ -1,0 +1,5 @@
+#!/bin/bash
+
+notify-send "Will shutdown now"
+sleep 10
+systemctl poweroff

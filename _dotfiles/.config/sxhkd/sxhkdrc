@@ -6,7 +6,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	xterm
 
 # program launcher
 super + @space
@@ -122,6 +122,9 @@ super + {n, p}
 super + {1-9,0}
 	exec $HOME/.local/bin/bspc/gotodesktop '^{1-9,10}'
 
+super + KP_{1-9,0}
+	exec $HOME/.local/bin/bspc/gotodesktop '^{1-9,10}'
+
 # Send node to desktop x
 super + alt + {1-9,0}
 	bspc node -d '^{1-9,10}' --follow
@@ -165,7 +168,7 @@ super + alt + shift + {Left,Down,Up,Right}
 # \__|_| |_|\___|_| |_| |_|\___|
 
 super + alt + {KP_Add, KP_Subtract}
-	exec $HOME/.local/bin/bspc/changeborder {3,-3}
+	exec $HOME/.local/bin/bspc/changeborder {1,-1}
 
 super + {KP_Add, KP_Subtract}
-	exec $HOME/.local/bin/bspc/changegap {10,-10}
+	exec $HOME/.local/bin/bspc/changegap {2,-2}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+bspc wm -r
+pkill -USR1 -x sxhkd
+polybar-msg cmd restart
+pkill compton
+compton &
+
+[[ ! $(pidof -x sxhkd) ]] && sxhkd &
+[[ ! $(pidof -x compton) ]] && compton &
+[[ ! $(pidof -x polybar) ]] && polybar top &
+
+nitrogen --set-zoom --random &
+xsetroot -cursor_name left_ptr &

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+notify-send "Will reboot now"
+sleep 10
+systemctl reboot

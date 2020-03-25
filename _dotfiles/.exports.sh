@@ -31,5 +31,8 @@ export CXX="g++"
 export MAKEFLAGS="-j$CORES"
 export INSTALL_PREFIX="$HOME/.local"
 
+# fix java rendering issues with bspwm
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # set path variable
 export PATH="$HOME/.yarn/bin:$CARGO_HOME/bin:$PATH"

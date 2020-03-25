@@ -2,11 +2,11 @@
 
 bspc monitor -d {1..9}
 
-bspc config top_padding 30
+bspc config top_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config border_width 3
+bspc config border_width 2
 bspc config window_gap 10
 
 # Borders and gaps
@@ -33,10 +33,14 @@ bspc config auto_cancel true
 
 # Rules
 bspc rule -a Firefox-esr -o desktop=^2 follow=on
+bspc rule -a Enpass state=floating
+bspc rule -a jetbrains-toolbox state=floating
+
+bspc rule -a mpv state=floating
 
 [[ ! $(pidof -x sxhkd) ]] && sxhkd &
 [[ ! $(pidof -x compton) ]] && compton &
-[[ ! $(pidof -x polybar) ]] && polybar top &
 [[ ! $(pidof -x barrier) ]] && barrier --restart bismut.local &
 nitrogen --set-zoom --random &
 xsetroot -cursor_name left_ptr &
+$HOME/.config/polybar/launch.sh

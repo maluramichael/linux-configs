@@ -1,0 +1,7 @@
+#!/bin/bash
+
+elements=$(ls "$HOME/.local/bin/polybarmenu")
+selection=$(echo "$elements" | dmenu -l 10 -i -nf white -sb crimson)
+script="$HOME/.local/bin/polybarmenu/$selection"
+
+[[ -f $script ]] && exec "$script"
