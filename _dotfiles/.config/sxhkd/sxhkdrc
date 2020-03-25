@@ -161,6 +161,9 @@ super + shift + {Left,Down,Up,Right}
 super + alt + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
+super + {c,b,e}
+	bspc node @parent -{C forward,B,E}
+
 # _   _
 #| |_| |__   ___ _ __ ___   ___
 #| __| '_ \ / _ \ '_ ` _ \ / _ \
