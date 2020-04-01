@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="$HOME/.local/bin:$PATH"
+addToPATH "$HOME/.local/bin"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 echo "$(uname -a) $(uptime -p)"

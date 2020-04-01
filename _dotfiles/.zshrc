@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="alanpeabody"
@@ -28,10 +30,10 @@ plugins=(
 )
 autoload -U compinit && compinit
 
-source ~/.profile
-source $ZSH/oh-my-zsh.sh
-
+source ~/.functions.sh
 source ~/.exports.sh
 source ~/.alias.sh
-source ~/.functions.sh
 source ~/.setup.sh
+source ~/.profile
+
+source $ZSH/oh-my-zsh.sh

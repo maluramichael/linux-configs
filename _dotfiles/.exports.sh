@@ -35,4 +35,5 @@ export INSTALL_PREFIX="$HOME/.local"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # set path variable
-export PATH="$HOME/.yarn/bin:$CARGO_HOME/bin:$PATH"
+addToPATH "$HOME/.yarn/bin"
+addToPATH "$CARGO_HOME/bin"

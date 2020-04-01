@@ -1,21 +1,21 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "400x20-10+40"
+    geometry = "500x40-710-40"
     indicate_hidden = yes
     shrink = false
-    transparency = 10
+    transparency = 1
     notification_height = 0
-    separator_height = 0
+    separator_height = 2
     padding = 2
     horizontal_padding = 2
-    frame_width = 0
-    frame_color = "#ffffff"
-    separator_color = frame
+    frame_width = 2
+    frame_color = "#333333"
+    separator_color = "#333333"
     sort = yes
-    idle_threshold = 120
+    idle_threshold = 20
     ### Text ###
-    font = Monospace 10
+    font = monospace 10
     line_height = 0
     markup = full
     format = "<b>%a: %s</b>\n\n%b"
@@ -28,10 +28,10 @@
     stack_duplicates = true
     hide_duplicate_count = false
     show_indicators = true
-    icon_position = right
-    min_icon_size = 16
-    max_icon_size = 16
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_position =
+    min_icon_size = 0
+    max_icon_size = 0
+    #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
     ### History ###
     sticky_history = yes
     history_length = 20
@@ -51,13 +51,13 @@
     mouse_right_click = close_all
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#333333"
     timeout = 5
 
 [urgency_normal]
-    background = "#333333"
-    foreground = "#ffffff"
+    background = "#ffffff"
+    foreground = "#000000"
     timeout = 15
 
 [urgency_critical]

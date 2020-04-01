@@ -9,11 +9,17 @@ super + Return
 	xterm
 
 # program launcher
-super + @space
-	$HOME/.local/bin/rofi -show combi
+super + space
+	$HOME/.local/bin/rofi -show drun
+
+super + Escape
+	dmenu_run  -i -nf white -sb crimson -fn 'Terminus:pixelsize=10' -p 'Menu'
 
 super + F9
 	$HOME/.local/bin/changewallpaper && notify-send "wallpaper changed"
+
+super + Ctrl + Alt + F12
+  systemctl reboot
 
 # Screenshots
 Print
@@ -21,6 +27,9 @@ Print
 
 ctrl + Print
 	exec $HOME/.local/bin/screenshot -c
+
+F1
+  exec $HOME/xdofoehelp
 
 #          _                 _
 # _ __ ___| | ___   __ _  __| |
@@ -108,14 +117,16 @@ super + m
 #                     |___/
 
 # focus the node in the given direction
-super + {Left,Down,Up,Right}
-	exec $HOME/.local/bin/bspc/focusnode {west,south,north,east}
+#super + {Left,Down,Up,Right}
+#	exec $HOME/.local/bin/bspc/focusnode {west,south,north,east}
 
 super + alt + {Left,Down,Up,Right}
   exec $HOME/.local/bin/bspc/movenode {west,south,north,east}
 
 # focus the next/previous node in the current desktop
 super + {n, p}
+	bspc node -f {next,prev}.local
+alt + {_,shift + }{Tab}
 	bspc node -f {next,prev}.local
 
 # Go to desktop x
@@ -137,9 +148,8 @@ super + ctrl + Left
 super + ctrl + Right
 	bspc node -d next --follow
 
-# Go to next,prev desktop via alt + tab or alt + shift + tab
-alt + {_,shift + }{Tab}
-	bspc desktop -f {next,prev}.local
+super + {Left, Right}
+	bspc desktop -f {prev,next}.local
 
 super + alt + r
   bspc node --swap @brother

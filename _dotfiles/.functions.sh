@@ -19,9 +19,26 @@ dev() {
 }
 
 printcolors() {
-  for x in {0..8}; do for i in {30..37}; do
-    for a in {40..47}; do echo -ne "\e[$x;$i;$a""m\\\e[$x;$i;$a""m\e[0;37;40m "; done
-    echo
-  done; done
-  echo ""
+  for i in {0..255}; do
+    printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+    if ((i == 7)); then
+      printf "\n"
+    fi
+    if ((i == 15)) || ((i > 15)) && (((i - 15) % 6 == 0)); then
+      printf "\n"
+    fi
+  done
+}
+
+joinby() {
+  local IFS="$1"
+  shift
+  echo "$*"
+}
+
+addToPATH() {
+  case ":$PATH:" in
+    *":$1:"*) :;; # already there
+    *) PATH="$1:$PATH";; # or PATH="$PATH:$1"
+  esac
 }
