@@ -7,6 +7,7 @@ call plug#begin('$DEV_HOME/vim/plugged')
   Plug 'editorconfig/editorconfig-vim'
   Plug 'mattn/emmet-vim'
   Plug 'rust-lang/rust.vim'
+  Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 set tabstop=2       " number of visual spaces per TAB

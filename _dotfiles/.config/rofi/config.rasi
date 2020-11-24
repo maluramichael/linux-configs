@@ -1,10 +1,5 @@
 configuration {
-	modi: "drun,window";
-	width: 50;
-	lines: 20;
-	columns: 1;
-	font: "mono 12";
-	location: 0;
+	font: "Hack 20";
 	padding: 0;
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -25,16 +20,14 @@ configuration {
 	drun-display-format: "{name}";
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-  sort: true;
+	sort: true;
 	sorting-method: "fzf";
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
-	sidebar-mode: true;
 /*	eh: 1;*/
-  auto-select: true;
+  	auto-select: true;
 	parse-hosts: false;
 /*	parse-known-hosts: true;*/
-	combi-modi: "drun,window";
 /*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
@@ -53,7 +46,6 @@ configuration {
 	window-format: "[{w}] {c} {t}";
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "malura";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -146,4 +138,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "/home/michael/.config/rofi/themes/gruvbox-common.rasi"
+@import "~/.config/rofi/themes/malura.rasi"

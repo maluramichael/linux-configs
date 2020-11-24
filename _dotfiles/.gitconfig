@@ -11,6 +11,7 @@
 	ui = true
 [core]
 	editor = code -w
+	autocrlf = input
 [merge]
 	tool = meld
 [mergetool]
@@ -58,3 +59,5 @@
 
 	#This one is also usefule to run merge test before merge to check for any conflicts.
 	mergetest = "!f(){ git merge --no-commit --no-ff \"$1\"; git merge --abort; echo \"Merge aborted\"; };f "
+[pull]
+	rebase = true

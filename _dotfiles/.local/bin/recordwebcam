@@ -5,6 +5,5 @@ path="$HOME/Videos/_webcam"
 mkdir -p "$path"
 out="$path/webcam_${d}.avi"
 
-ffmpeg -f alsa -r 16000 -i plughw:CARD=IM,DEV=0 \
-  -f video4linux2 -i /dev/video0 \
+ffmpeg -f video4linux2 -i /dev/video0 \
   -r 30 -f avi -vcodec mpeg4 -vtag xvid -acodec libmp3lame -ab 96k "$out"

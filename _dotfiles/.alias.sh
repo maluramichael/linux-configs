@@ -1,6 +1,12 @@
 # git
 alias remove-merged-branches="git stash && git checkout develop && git branch --merged | grep -v master | grep -v develop | xargs git branch -d"
 
+# arch
+alias pacexplicit=pacman -Qe
+alias pacforeign=pacman -Qm
+alias pacnative=pacman -Qn
+alias pacexplicitnative=pacman -Qent
+
 # random tools
 alias downloadyoutubevideoasmp3="youtube-dl --extract-audio --audio-format mp3 --"
 
@@ -8,6 +14,7 @@ alias downloadyoutubevideoasmp3="youtube-dl --extract-audio --audio-format mp3 -
 alias l='ls -lahi' # Long view, show hidden
 alias la='ls -AFh' # Compact view, show hidden
 alias ll='ls -lFh' # Long view, no hidden
+alias grep='grep --color=auto'
 alias reload="source ~/.zshrc"
 alias remove_empty_dirs="find . -type d -empty"
 
@@ -26,6 +33,7 @@ alias docker-ps-short='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Size
 
 alias cp='cp -iv'                   # Preferred 'cp' implementation
 alias mv='mv -iv'                   # Preferred 'mv' implementation
+alias rm='rm -iv'                   # Preferred 'mrm' implementation
 alias mkdir='mkdir -pv'             # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'               # Preferred 'ls' implementation
 alias less='less -FSRXc'            # Preferred 'less' implementation

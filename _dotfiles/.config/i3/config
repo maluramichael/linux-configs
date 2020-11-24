@@ -58,7 +58,6 @@ floating_modifier $mod
 
 bar {
 	font pango:mono 10
-	status_command i3blocks
 	position bottom
 	mode dock
   separator_symbol "|"

@@ -14,4 +14,3 @@ mkdir -p build
 cd build || return
 cmake -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX="$INSTALL_PREFIX" ..
 make
-make install

@@ -18,6 +18,8 @@ done
 
 scripts=$(dialog --separate-output --checklist "Select options:" 30 50 30 "${libs[@]}" --output-fd 1)
 
+clear
+
 for script in $scripts; do
   if [ -x "$(command -v figlet)" ]; then
     figlet "${script}"
