@@ -2,6 +2,13 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
+export HISTSIZE=LONG_MAX
+export HISTFILE="$HOME/.history"
+export SAVEHIST=$HISTSIZE
+
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+
 ZSH_CUSTOM="$HOME/.zsh"
 ZSH_THEME="malura"
 ZSH_TMUX_AUTOSTART=false

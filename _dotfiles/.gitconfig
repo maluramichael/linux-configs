@@ -10,7 +10,6 @@
 [color]
 	ui = true
 [core]
-	editor = code -w
 	autocrlf = input
 [merge]
 	tool = meld
